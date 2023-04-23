@@ -21,5 +21,6 @@ module.exports = [
   "./gulp/tasks/watch",
   "./gulp/tasks/serve",
   "./gulp/tasks/copy",
-  "./gulp/tasks/default",
+  "./gulp/tasks/build",
+  "./gulp/tasks/default"
 ];
