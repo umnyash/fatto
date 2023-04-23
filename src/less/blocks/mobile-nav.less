@@ -1,0 +1,56 @@
+/*------------------------------ mobile-nav ----------------------------------*/
+
+.mobile-nav {
+  margin-bottom: 15px;
+  border-left  : 1px solid #DDDDDD;
+  border-right : 1px solid #DDDDDD;
+
+  &__link {
+    .flex-align-center();
+    position     : relative;
+    height       : 60px;
+    padding      : 10px;
+    border-bottom: 1px solid #DDDDDD;
+    font-weight  : 500;
+    font-size    : 16px;
+    color        : @black;
+    overflow     : hidden;
+    .transition();
+
+    &::before {
+      content        : '';
+      position       : absolute;
+      top            : calc(50% - 8px);
+      left           : -30px;
+      width          : 16px;
+      height         : 16px;
+      background     : url(../img/icons/chevron-left.svg) center no-repeat;
+      background-size: contain;
+      .transition();
+    }
+
+    &::after {
+      content        : '';
+      position       : absolute;
+      top            : calc(50% - 8px);
+      right          : 10px;
+      width          : 16px;
+      height         : 16px;
+      background     : url(../img/icons/chevron-right.svg) center no-repeat;
+      background-size: contain;
+      .transition();
+    }
+
+    &.open {
+      padding-left: 36px;
+
+      &::before {
+        left: 10px;
+      }
+
+      &::after {
+        right: -30px;
+      }
+    }
+  }
+}

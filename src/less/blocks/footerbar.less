@@ -1,0 +1,65 @@
+/*------------------------------ footerbar ----------------------------------*/
+
+.footerbar {
+
+  &__wrap {
+    .flex-align-center();
+    column-gap  : 60px;
+    row-gap     : 20px;
+    padding     : 40px 20px;
+    border-left : 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+
+    .xxl-block( {
+        justify-content: space-between;
+        column-gap     : 30px;
+        padding        : 20px 10px;
+      }
+
+    );
+
+    .lg-block( {
+        flex-direction: column;
+        row-gap       : 30px;
+      }
+
+    );
+  }
+
+  .logo {
+    width : 267px;
+    height: 80px;
+
+    .xxl-block( {
+        width       : 240px;
+        height      : 72px;
+        margin-right: 20px;
+      }
+
+    );
+
+    .xl-block( {
+        width : 200px;
+        height: 60px;
+      }
+
+    );
+
+    .md-block( {
+        width : 230px;
+        height: 69px;
+      }
+
+    );
+  }
+
+  .callcenter__desc p {
+
+    .xxl-block( {
+        font-size  : 13px;
+        line-height: 17px;
+      }
+
+    );
+  }
+}

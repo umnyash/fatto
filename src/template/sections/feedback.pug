@@ -1,0 +1,23 @@
+// feedback
+
+.feedback
+
+  .feedback__bg
+    picture
+      source(srcset="img/webp/bg-help-sm.webp" media="(max-width:575px)" type="image/webp")
+      source(srcset="img/bg-help-sm.jpg" media="(max-width:575px)")
+      source(srcset="img/webp/bg-help.webp" type="image/webp")
+      img(src="img/bg-help.jpg" alt="")
+
+  p.feedback__text Нужна помощь?
+
+  p.feedback__title Позвоните или напишите
+
+  .feedback__contacts
+
+    a.feedback__tel(href="tel:+79645159041") +7 (964) 515-90-41
+
+    include social-feedback
+
+// end feedback
+

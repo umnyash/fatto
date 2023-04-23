@@ -1,0 +1,50 @@
+doctype html
+html(lang='ru')
+
+  include sections/head
+
+  body
+
+    .wrap
+
+      include sections/top-page
+
+      main
+
+        .container
+
+          include sections/breadcrumbs-designer
+
+        .page-head
+
+          .page-head__bg
+            picture
+
+              source(srcset="img/webp/bg-designer-sm.webp" media="(max-width:575px)" type="image/webp")
+              source(srcset="img/bg-designer-sm.jpg" media="(max-width:575px)")
+
+              source(srcset="img/webp/bg-designer-md.webp" media="(max-width:1080px)" type="image/webp")
+              source(srcset="img/bg-designer-md.jpg" media="(max-width:1080px)")
+
+              source(srcset="img/webp/bg-designer.webp" type="image/webp")
+              img(src="img/bg-designer.jpg" alt="")
+
+          .container
+
+            p.page-title Дизайнерам
+
+        .container
+
+          include sections/designer
+
+          include sections/features
+
+          include sections/feedback
+
+        include sections/subscribe
+
+      include sections/footer
+
+    include sections/modal-designer
+
+    include sections/bottom-page

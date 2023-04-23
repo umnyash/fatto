@@ -1,0 +1,66 @@
+// modal
+
+.modal.js-modal#js-modal-registr
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    .modal__one
+
+      h2.modal__title Регистрация
+      p.modal__text Следите за состоянием заказа и сохраняйте избранные товары
+
+      form#form-registration(action="")
+
+        .form-group
+          label Почта
+          input(type="email" name="#")
+
+        .form-checkbox
+          input#subscribe(type="checkbox" name="#" checked)
+          label(for="subscribe") Подписаться на рассылку
+
+        .form-checkbox
+          input#designer(type="checkbox" name="#")
+          label(for="designer") Я дизайнер
+
+        .modal__info После регистрации заполните форму для дизайнеров в вашем личном кабинете
+
+      button.modal__btn#js-send-code(type="button")
+        span Выслать код
+        span Выслать код
+
+      .modal__footer
+        p У вас уже есть личный кабинет?
+        a.js-login(href="#js-modal-login") Войти
+
+
+.modal.js-modal#js-modal-login
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    .modal__one
+
+      h2.modal__title Вход в личный кабинет
+
+      form#form-login(action="")
+
+        .form-group
+          label Почта
+          input(type="email" name="#" autocomplete="off")
+
+      button.modal__btn#js-send-code(type="button")
+        span Выслать код
+        span Выслать код
+
+      .modal__footer
+        p У вас нет личного кабинета?
+        a.js-registr(href="#js-modal-registr") Зарегистрироваться
+
+// end modal
+

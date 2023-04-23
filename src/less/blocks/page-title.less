@@ -1,0 +1,76 @@
+/*------------------------------ page-title ----------------------------------*/
+
+.page-title {
+  margin        : 0 0 50px;
+  font-weight   : 300;
+  font-size     : 80px;
+  line-height   : 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color         : #060915;
+  text-align    : center;
+
+  .xxl-block( {
+      margin-bottom: 40px;
+      font-size    : 60px;
+    }
+
+  );
+
+  .lg-block( {
+      font-size: 48px;
+    }
+
+  );
+
+  .sm-block( {
+      margin-bottom: 30px;
+      font-size    : 35px;
+    }
+
+  );
+
+  br {
+    display: none;
+
+    .xs-block( {
+        display: block;
+      }
+
+    );
+  }
+
+  &--left {
+    text-align: left;
+
+    .sm-block( {
+        text-align: center;
+      }
+
+    );
+  }
+
+  &--lc {
+    font-size     : 55px;
+    text-transform: none;
+    letter-spacing: normal;
+
+    .xxl-block( {
+        font-size: 46px;
+      }
+
+    );
+
+    .lg-block( {
+        font-size: 38px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 28px;
+      }
+
+    );
+  }
+}

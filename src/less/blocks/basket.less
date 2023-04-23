@@ -1,0 +1,78 @@
+/*------------------------------ basket ----------------------------------*/
+
+.basket {
+  display              : grid;
+  grid-template-columns: 1fr 514px;
+  column-gap           : 50px;
+  margin-bottom        : 120px;
+
+  .xxl-block( {
+      grid-template-columns: 1fr 382px;
+      column-gap           : 30px;
+      margin-bottom        : 110px;
+    }
+
+  );
+
+  .xl-block( {
+      column-gap    : 20px;
+      margin-bottom : 100px;
+    }
+
+  );
+
+  .lg-block( {
+      grid-template-columns: 1fr;
+      row-gap              : 50px;
+      margin-bottom        : 90px;
+    }
+
+  );
+
+  &__list {
+    .grid-column(30px);
+
+    .xl-block( {
+        row-gap: 20px;
+      }
+
+    );
+  }
+
+  &__del {
+    .flex-align-center();
+    column-gap: 10px;
+
+    .xl-block( {
+        margin-top: 20px;
+      }
+
+    );
+
+    svg {
+      width : 20px;
+      height: 20px;
+      fill  : #919191;
+      .transition();
+    }
+
+    span {
+      font-weight: 400;
+      font-size  : 18px;
+      line-height: 1;
+      color      : #919191;
+      .transition();
+    }
+
+    &:hover {
+
+      svg {
+        fill: @red;
+      }
+
+      span {
+        color: @red;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// promocode
+
+.promocode
+
+  .promocode__toggle
+    span Есть промокод?
+    svg: use(href="img/icons/sprite.svg#chevron")
+
+  .promocode__hidden
+
+    .form-group.error
+      label Введите промокод
+      input(type="text")
+
+      p.error-text
+        svg: use(href="img/icons/sprite.svg#close")
+        |  промокод не верный
+
+    .form-group.success
+      label Введите промокод
+      input(type="text")
+
+    a.promocode__btn(href="#")
+      span Применить
+      span Применить
+
+// end promocode

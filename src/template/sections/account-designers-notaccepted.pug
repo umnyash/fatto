@@ -1,0 +1,29 @@
+// account
+
+.account
+
+  p.account__name Анна Петрова
+
+  include acc-nav-designers
+
+  a.account-link(href="#")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Личный кабинет
+
+  p.design-title Для дизайнеров
+
+  .page-head.page-head--not
+
+    .container
+
+      .page-head__text
+        p К сожалению, ваша заявка <br>не была принята
+        p Ваше резюме показалось нам не достаточно подходящим, попробуйте снова через некоторое время
+
+  include designer-account
+
+  a.account__exit.js-modal-show(href="#js-modal-exit")
+    svg: use(href="img/icons/sprite.svg#logout")
+    span Выйти
+
+// end account

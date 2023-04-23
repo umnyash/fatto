@@ -1,0 +1,81 @@
+/*------------------------------ furni ----------------------------------*/
+
+.furni {
+
+  &__title {
+    margin        : 0 0 20px;
+    font-weight   : 300;
+    font-size     : 100px;
+    line-height   : 1;
+    text-align    : center;
+    text-transform: uppercase;
+
+    .xxl-block( {
+        font-size: 70px;
+      }
+
+    );
+
+    .lg-block( {
+        font-size: 58px;
+      }
+
+    );
+
+    .sm-block( {
+        margin-bottom: 10px;
+        font-size    : 45px;
+      }
+
+    );
+  }
+
+  &__text {
+    margin     : 0 0 50px;
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+    text-align : center;
+
+    .xxl-block( {
+        margin-bottom: 40px;
+        font-size    : 32px;
+      }
+
+    );
+
+    .lg-block( {
+        font-size: 28px;
+      }
+
+    );
+
+    .sm-block( {
+        margin-bottom: 30px;
+        font-size    : 22px;
+      }
+
+    );
+  }
+
+  &__img {
+
+    .sm-block( {
+        margin-left : -10px;
+        margin-right: -10px;
+      }
+
+    );
+
+    .xs-block( {
+        margin-left : -20px;
+        margin-right: -20px;
+      }
+
+    );
+
+    img {
+      .cover();
+    }
+  }
+}

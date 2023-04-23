@@ -1,0 +1,170 @@
+/*------------------------------ fancybox ----------------------------------*/
+
+.fancybox {
+
+  &-bg {
+    background: #FFFFFF;
+    opacity   : 1 !important;
+  }
+
+  &-slide--image {
+    padding: 80px 0;
+
+    .xl-block( {
+        padding: 60px 0 160px;
+      }
+
+    );
+
+    .lg-block( {
+        padding-bottom: 100px;
+      }
+
+    );
+  }
+
+  &-button--close {
+    color           : #DDDDDD;
+    background-color: transparent;
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  &-toolbar {
+    visibility      : visible !important;
+    opacity         : 1 !important;
+    top             : 70px;
+    background-color: transparent;
+
+    .xl-block( {
+        top  : 50px;
+        right: -60px;
+      }
+
+    );
+
+    .lg-block( {
+        top  : 15px;
+        right: 0;
+      }
+
+    );
+  }
+
+  &-thumbs {
+    right           : auto;
+    left            : 200px;
+    width           : 120px;
+    padding         : 80px 0;
+    background-color: transparent;
+
+    .xxl-block( {
+        left : 80px;
+        width: 100px;
+      }
+
+    );
+
+    .xl-block( {
+        left   : 150px;
+        right  : 150px;
+        bottom : 30px;
+        top    : auto;
+        width  : auto;
+        padding: 0;
+      }
+
+    );
+
+    .lg-block( {
+        left   : 20px;
+        right  : 20px;
+        bottom : 10px;
+        height : auto;
+      }
+
+    );
+  }
+
+  &-inner {
+    left: 400px;
+
+    .xxl-block( {
+        left : 290px;
+        right: 80px !important;
+      }
+
+    );
+
+    .xl-block( {
+        left : 150px;
+        right: 150px !important;
+      }
+
+    );
+
+    .lg-block( {
+        left : 20px;
+        right: 20px !important;
+      }
+
+    );
+  }
+
+  &-thumbs__list {
+    width: 100%;
+
+    .xl-block( {
+        display       : flex;
+        height        : 100%;
+        column-gap    : 30px;
+        padding-bottom: 10px;
+        overflow-x    : auto;
+      }
+
+    );
+
+    .lg-block( {
+        column-gap: 10px;
+      }
+
+    );
+  }
+
+  &-thumbs__list a {
+    display     : block;
+    max-width   : 100%;
+    max-height  : none;
+    width       : 100%;
+    height      : auto;
+    margin      : 0 0 20px;
+    aspect-ratio: 1;
+
+    .xl-block( {
+        width : 100px;
+        height: 100px;
+        margin: 0;
+      }
+
+    );
+
+    .lg-block( {
+        flex  : none;
+        width : 60px;
+        height: 60px;
+      }
+
+    );
+
+    &::before {
+      border-width: 2px;
+    }
+  }
+
+  &-thumbs-y .fancybox-thumbs__list::-webkit-scrollbar {
+    width : 2px;
+    height: 2px;
+  }
+}

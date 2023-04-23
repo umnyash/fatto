@@ -1,0 +1,57 @@
+// address
+
+.address
+
+  a.account-link(href="#")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Личный кабинет
+
+  p.address__title Адрес
+
+  form(action="")
+
+    .address__grid
+
+      .form-group
+        label Населёный пункт
+          sup *
+        input(type="text" name="#" placeholder="Смоленск" required)
+
+      .form-group
+        label Область
+          sup *
+        input(type="text" name="#" placeholder="Смоленская" required)
+
+      .form-group
+        label Улица
+          sup *
+        input.phone(type="text" name="#" placeholder="Партизанская" required)
+
+      .address__row
+
+        .form-group
+          label Дом
+            sup *
+          input(type="text" name="#" placeholder="5" required)
+
+        .form-group
+          label Подъезд
+          input(type="text" name="#" placeholder="3")
+
+        .form-group
+          label Этаж
+          input(type="text" name="#" placeholder="2")
+
+        .form-group
+          label Квартира/офис
+          input(type="text" name="#" placeholder="56")
+
+        .form-checkbox
+          input#elevator(type="checkbox" name="#")
+          label(for="elevator") Есть грузовой лифт
+
+    button.form-btn(type="submit")
+      span Сохранить
+      span Сохранить
+
+// end address

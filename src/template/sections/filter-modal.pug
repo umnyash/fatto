@@ -1,0 +1,60 @@
+// filter-modal
+
+form.filter-modal(action="")
+
+  .filter-modal__item
+
+    .filter-modal__name
+      span Цена
+      svg: use(href="img/icons/sprite.svg#chevron")
+
+    .filter-modal__hidden
+
+      include range-price
+
+
+  .filter-modal__item
+
+    .filter-modal__name
+      span Цвет
+      svg: use(href="img/icons/sprite.svg#chevron")
+
+    .filter-modal__hidden
+
+      include filter-color
+
+  .filter-modal__item
+
+    .filter-modal__name
+      span Другой фильтр
+      svg: use(href="img/icons/sprite.svg#chevron")
+
+    .filter-modal__hidden
+
+      .form-checkbox
+        input#check11(type="checkbox" name="")
+        label(for="check11") Другой пункт фильтра
+
+      .form-checkbox
+        input#check12(type="checkbox" name="")
+        label(for="check12") Другой пункт фильтра
+
+      .form-checkbox
+        input#check13(type="checkbox" name="")
+        label(for="check13") Другой пункт фильтра
+
+      .form-checkbox
+        input#check14(type="checkbox" name="")
+        label(for="check14") Другой пункт фильтра
+
+  .filter-modal__footer
+
+    button(type="submit")
+      img(src="img/icons/check.svg" alt="")
+      | Применить
+
+    button(type="reset")
+      img(src="img/icons/close.svg" alt="")
+      | Сбросить
+
+// end filter-modal

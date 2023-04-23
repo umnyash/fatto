@@ -1,0 +1,125 @@
+/*------------------------------ des-form ----------------------------------*/
+
+.des-form {
+
+  &__title {
+    margin     : 0 0 20px;
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+
+    .xxl-block( {
+        font-size: 32px;
+      }
+
+    );
+
+    .xl-block( {
+        margin-bottom: 10px;
+        text-align   : center;
+      }
+
+    );
+
+    .lg-block( {
+        font-size: 28px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 22px;
+      }
+
+    );
+  }
+
+  &__text {
+    max-width  : 887px;
+    margin     : 0 0 50px;
+    font-weight: 400;
+    font-size  : 20px;
+    line-height: 1.2;
+
+    .xxl-block( {
+        margin-bottom: 40px;
+        font-size    : 18px;
+      }
+
+    );
+
+    .xl-block( {
+        text-align: center;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 16px;
+        color    : #919191;
+      }
+
+    );
+  }
+
+  &__grid {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap           : 50px;
+
+    .xxl-block( {
+        column-gap: 30px;
+      }
+
+    );
+
+    .lg-block( {
+        grid-template-columns: 1fr;
+      }
+
+    );
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+
+    &--half {
+      width: calc(50% - 25px);
+
+      .xxl-block( {
+          width: calc(50% - 15px);
+        }
+
+      );
+
+      .lg-block( {
+          width: 100%;
+        }
+
+      );
+    }
+  }
+
+  .form-radio {
+    margin-bottom: 30px;
+  }
+
+  .form-btn {
+    margin-top: 20px;
+
+    .xxl-block( {
+        margin-top: 12px;
+      }
+
+    );
+  }
+
+  .form-agree {
+
+    .xxl-block( {
+        max-width: 590px;
+      }
+
+    );
+  }
+}

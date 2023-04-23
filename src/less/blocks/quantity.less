@@ -1,0 +1,94 @@
+/*------------------------------ quantity ----------------------------------*/
+
+.quantity {
+  .flex-align-center();
+  height: 50px;
+
+  .xl-block( {
+      height: 26px;
+    }
+
+  );
+
+  .sm-block( {
+      display: block;
+      height : 44px;
+    }
+
+  );
+
+  input {
+    width           : 50px;
+    height          : 50px;
+    border          : none;
+    background-color: transparent;
+    text-align      : center;
+    color           : @black;
+    font-weight     : 500;
+    font-size       : 20px;
+    -moz-appearance : textfield;
+
+    .xl-block( {
+        height : 26px;
+      }
+
+    );
+
+    .sm-block( {
+        display       : inline-block;
+        vertical-align: middle;
+        width         : 46px;
+        height        : 44px;
+      }
+
+    );
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin            : 0;
+    }
+  }
+
+  &__btn {
+    .flex-center();
+    width             : 50px;
+    height            : 50px;
+    padding           : 0;
+    border            : none;
+    background-color  : transparent;
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+    appearance        : none;
+    cursor            : pointer;
+
+    .xl-block( {
+        height : 26px;
+      }
+
+    );
+
+    .sm-block( {
+        display       : inline-block;
+        vertical-align: middle;
+        width         : 40px;
+        height        : 44px;
+      }
+
+    );
+
+    svg {
+      width : 40px;
+      height: 6px;
+      fill  : #bbb;
+      .transition();
+    }
+
+    &:hover {
+
+      svg {
+        fill: @black;
+      }
+    }
+  }
+}

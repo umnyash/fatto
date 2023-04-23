@@ -1,0 +1,79 @@
+/*------------------------------ order-card ----------------------------------*/
+
+.order-card {
+  .flex();
+  column-gap   : 10px;
+  margin-bottom: 30px;
+
+  .sm-block( {
+      column-gap: 5px;
+    }
+
+  );
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width     : 140px;
+    height    : 140px;
+    background: #F9F9F9;
+
+    .sm-block( {
+        width : 80px;
+        height: 80px;
+      }
+
+    );
+
+    img {
+      .contain();
+      mix-blend-mode: darken;
+    }
+  }
+
+  &__desc {
+    width: calc(100% - 150px);
+
+    .sm-block( {
+        width: calc(100% - 85px);
+      }
+
+    );
+  }
+
+  &__title {
+    margin     : 0 0 10px;
+    font-weight: 400;
+    font-size  : 20px;
+    line-height: 1.1;
+    color      : @black;
+
+    .xl-block( {
+        font-size: 18px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 16px;
+      }
+
+    );
+  }
+
+  &__info {
+    display              : grid;
+    grid-template-columns: 110px 1fr;
+    column-gap           : 16px;
+    row-gap              : 5px;
+
+    span {
+      font-weight: 400;
+      font-size  : 14px;
+      line-height: 18px;
+      color      : #919191;
+    }
+  }
+}

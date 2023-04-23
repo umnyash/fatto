@@ -1,0 +1,97 @@
+// checkout
+
+.checkout
+
+  a.checkout__back.js-modal-show(href="#js-modal-exit")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Назад к корзине
+
+  p.checkout__title Оформление заказа на сумму <span>800 000р</span>
+
+  form.checkout__form(action="")
+
+    .checkout__nav
+
+      a.checkout__link.js-tab-link.active(href="#checkout1") <span>1</span> Личные данные
+
+      a.checkout__link.js-tab-link.disabled(href="#checkout2") <span>2</span> Доставка
+
+      a.checkout__link.js-tab-link.disabled(href="#checkout3") <span>3</span> Способ оплаты
+
+
+    .checkout__content
+
+      .checkout__tab.js-tab#checkout1
+
+        .checkout__header
+
+          p.checkout__subtitle Введите личные данные
+
+          a.checkout__login.js-modal-show(href="#js-modal-login")
+            svg: use(href="img/icons/sprite.svg#login")
+            span или войдите в аккаунт
+
+        include mydata-checkout
+
+        a.checkout__btn.js-forward(href="#checkout2")
+          span Далее
+          span Далее
+
+
+      .checkout__tab.js-tab#checkout2
+
+        .checkout__header
+
+          p.checkout__subtitle Введите адрес доставки
+
+        include address-checkout
+
+        a.checkout__btn(href="#")
+          span Рассчитать доставку
+          span Рассчитать доставку
+
+        include delivery
+
+        a.checkout__btn.js-forward(href="#checkout3")
+          span Далее
+          span Далее
+
+
+      .checkout__tab.js-tab#checkout3
+
+        .checkout__sm
+
+          .checkout__header
+
+            p.checkout__subtitle Выберете способ оплаты
+
+            p.checkout__desc Заказ поступает в работу на изготовление при 100% предоплате.
+
+          include payment
+
+          .form-group
+            label Комментарий к заказу
+            textarea(name="#")
+
+          .checkout__sum
+            p
+              span Итого к оплате
+              span 804 500р
+            p
+              span Стоимость товаров
+              span 800 000р
+            p
+              span Стоимость доставки
+              span 4 500р
+
+          button.form-btn(type="submit")
+            span Оплатить заказ
+            span Оплатить заказ
+
+          p.form-agree Нажимая на кнопку «Отправить заявку», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a>
+
+
+
+
+
+// end checkout

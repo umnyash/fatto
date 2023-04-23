@@ -1,0 +1,58 @@
+// favorites
+
+.favorites
+
+  a.account-link(href="#")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Личный кабинет
+
+  p.favorites__title Избранное
+
+  .favorites__filter
+
+    button(type = "button"  data-filter = "all") Всё (12)
+
+    button(type = "button"  data-filter = ".category-a") Обеденные столы (4)
+
+    button(type = "button"  data-filter = ".category-b") Письменные столы (6)
+
+    button(type = "button"  data-filter = ".category-c") Обеденные столы (2)
+
+    button(type = "button"  data-filter = ".category-d") Письменные столы (6)
+
+
+  .favorites__grid
+
+    .favorites__item.mix.category-a
+
+      include card-fav
+
+    .favorites__item.mix.category-b
+
+      include card-fav
+
+    .favorites__item.mix.category-c
+
+      include card-fav
+
+    .favorites__item.mix.category-d
+
+      include card-fav
+
+    .favorites__item.mix.category-a
+
+      include card-fav
+
+    .favorites__item.mix.category-b
+
+      include card-fav
+
+    .favorites__item.mix.category-c
+
+      include card-fav
+
+    .favorites__item.mix.category-d
+
+      include card-fav
+
+// end favorites

@@ -1,0 +1,41 @@
+/*------------------------------ navbar ----------------------------------*/
+
+.navbar {
+  position: relative;
+
+  &__wrap {
+    .flex-between();
+    align-items : center;
+    padding     : 0 40px;
+    border-left : 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+
+    .xxl-block( {
+        padding: 0 30px;
+      }
+
+    );
+
+    .xl-block( {
+        padding : 0 20px;
+      }
+
+    );
+
+    .lg-block( {
+        justify-content: flex-end;
+        height         : 35px;
+      }
+
+    );
+  }
+
+  .search {
+
+    .xl-block( {
+        display: none;
+      }
+
+    );
+  }
+}

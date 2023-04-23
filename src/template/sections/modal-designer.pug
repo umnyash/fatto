@@ -1,0 +1,40 @@
+// modal
+
+.modal.js-modal#js-success-design
+
+  .modal__inner.modal__inner--res
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    .modal__icon.green
+      svg: use(href="img/icons/sprite.svg#check")
+
+    .modal__text-res
+
+      p Ваша заявка успешно принята и находится в обработке
+
+      p В течение нескольких часов с вами свяжется менеджер, чтобы ответить на все ваши вопросы
+
+      p Cледить  за состоянием статуса вы сможете через личный кабинет в разделе «Для дизайнеров»
+
+      a.modal__btn(href="#")
+        span Войти в личный кабнет
+        span Войти в личный кабнет
+
+
+.modal.js-modal#js-fail
+
+  .modal__inner.modal__inner--res
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    .modal__icon.red
+      svg: use(href="img/icons/sprite.svg#close")
+
+    .modal__text-res
+
+      p К сожалению что-то пошло не так<br> отправьте заявку снова
+
+// end modal

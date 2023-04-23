@@ -1,0 +1,173 @@
+/*------------------------------ favorites ----------------------------------*/
+
+.favorites {
+  .flex-column();
+  width        : 100%;
+  margin-bottom: 120px;
+
+  .xxl-block( {
+      margin-bottom: 110px;
+    }
+
+  );
+
+  .xl-block( {
+      margin-bottom: 100px;
+    }
+
+  );
+
+  .lg-block( {
+      margin-bottom: 0;
+    }
+
+  );
+
+  &__title {
+    margin     : 0 0 50px;
+    font-weight: 300;
+    font-size  : 55px;
+    line-height: 1;
+
+    .xxl-block( {
+        margin-bottom: 40px;
+        font-size    : 46px;
+      }
+
+    );
+
+    .lg-block( {
+        font-size : 36px;
+        text-align: center;
+      }
+
+    );
+
+    .sm-block( {
+        margin-bottom: 30px;
+        font-size    : 28px;
+      }
+
+    );
+  }
+
+  &__filter {
+    .flex();
+    row-gap      : 10px;
+    margin-bottom: 20px;
+    padding-left : 10px;
+
+    .md-block( {
+        flex-wrap     : nowrap;
+        overflow-x    : auto;
+        width         : 100%;
+        padding-bottom: 5px;
+      }
+
+    );
+
+    .sm-block( {
+        margin-left   : -10px;
+        margin-right  : -10px;
+        padding-left  : 10px;
+        padding-right : 10px;
+        padding-bottom: 10px;
+      }
+
+    );
+
+    button {
+      position   : relative;
+      display    : block;
+      padding    : 10px 20px;
+      font-weight: 400;
+      font-size  : 20px;
+      line-height: 26px;
+      color      : #919191;
+      border     : none;
+      background : none;
+      cursor     : pointer;
+      .transition();
+
+      .xl-block( {
+          font-size  : 18px;
+          line-height: 23px;
+        }
+
+      );
+
+      .md-block( {
+          flex: none;
+        }
+
+      );
+
+      &::before {
+        content      : '';
+        position     : absolute;
+        left         : 0;
+        top          : calc(50% - 6px);
+        width        : 12px;
+        height       : 12px;
+        border-radius: 50%;
+        background   : transparent;
+        .transition();
+      }
+
+      &:hover {
+        color: @red;
+      }
+
+      &.mixitup-control-active {
+        color: @red;
+
+        &::before {
+          background: @red;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap                  : 50px;
+
+    .xxl-block( {
+        gap: 30px;
+      }
+
+    );
+
+    .xl-block( {
+        gap: 20px;
+      }
+
+    );
+
+    .lg-block( {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    );
+
+    .md-block( {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    );
+
+    .sm-block( {
+        column-gap: 5px;
+        row-gap   : 10px;
+      }
+
+    );
+
+    .xxs-block( {
+        grid-template-columns: 1fr;
+      }
+
+    );
+  }
+}

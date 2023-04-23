@@ -1,0 +1,43 @@
+// basket-info
+
+.basket-info#checkout
+
+  .basket-info__qnt
+    p
+      span Всего товаров
+      span 7
+    p
+      span Общим весом брутто
+      span 50 кг
+
+  .basket-info__sum
+    p
+      span На сумму
+      span 800 000р
+    p
+      span Предварительная сумма
+      span 960 000р
+    p.red
+      span Скидка
+      span -145 000р
+    p.red
+      span Промокод
+      span -15 000р
+
+  include promocode
+
+  a.basket-info__btn(href="#")
+    span Оформить заказ
+    span Оформить заказ
+
+  .basket-info__links
+
+    a(href="")
+      span О доставке и оплате
+      svg: use(href="img/icons/sprite.svg#chevron")
+
+    a(href="")
+      span Договор оферты
+      svg: use(href="img/icons/sprite.svg#chevron")
+
+// end basket-info

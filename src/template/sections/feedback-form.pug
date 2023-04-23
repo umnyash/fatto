@@ -1,0 +1,29 @@
+// feedback-form
+
+.feedback-form
+
+  p.feedback-form__title Обратная связь
+
+  form(action="")
+
+    .form-group
+      label ФИО
+        sup *
+      input(type="text" name="#" placeholder="Петрова Марина Александровна" required)
+
+    .form-group
+      label Телефон
+        sup *
+      input.phone(type="text" name="#" placeholder="+7 111 111 11 11" required)
+
+    .form-group
+      label Комментарий
+      textarea(name="#")
+
+    button.form-btn(type="submit")
+      span Отправить заявку
+      span Отправить заявку
+
+    p.form-agree Нажимая на кнопку «Отправить заявку», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a>
+
+// end feedback-form

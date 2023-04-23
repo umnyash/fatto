@@ -1,0 +1,78 @@
+/*------------------------------ global ----------------------------------*/
+
+html {
+  width     : 100%;
+  height    : 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width      : 100%;
+  min-width  : 320px;
+  margin     : 0;
+  padding    : 0;
+  font-family: 'IBM Plex Sans', monospace;
+  font-weight: normal;
+  font-style : normal;
+  font-size  : 18px;
+  line-height: normal;
+  color      : @black;
+}
+
+.wrap {
+  width     : 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  .wrapper();
+  .xxl(width, @container-xxl);
+  .xl(width, @container-xl);
+  .lg(width, @container-lg);
+  .md(width, @container-md);
+  .sm(width, @container-sm);
+  .xs(width, @container-xs);
+  .xxs(width, @container-xxs);
+}
+
+img {
+  max-width: 100%;
+  height   : auto;
+}
+
+a,
+a:focus,
+button,
+button:focus,
+input,
+input:focus {
+  outline        : none;
+  text-decoration: none;
+}
+
+p {
+  margin     : 0 0 30px;
+  font-weight: 400;
+  font-size  : 20px;
+  line-height: 1.3;
+
+  .xxl-block( {
+      font-size  : 18px;
+      line-height: 23px;
+    }
+
+  );
+
+  .sm-block( {
+      font-size   : 16px;
+      line-height : 1.3;
+    }
+
+  );
+}

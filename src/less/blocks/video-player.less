@@ -1,0 +1,45 @@
+/*------------------------------ video-player ----------------------------------*/
+
+.video-player {
+  width        : 100%;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .plyr--video .plyr__controls {
+    display: none;
+  }
+
+  .plyr__control--overlaid {
+    width     : 64px;
+    height    : 64px;
+    background: #FFFFFF;
+
+    .sm-block( {
+        width : 30px;
+        height: 30px;
+      }
+
+    );
+
+    &:hover {
+      background: #FFFFFF;
+    }
+  }
+
+  .plyr__control svg {
+    left: 10px;
+    fill: @black;
+
+    .sm-block( {
+        left  : -3px;
+        top   : -4px;
+        width : 9px;
+        height: 9px;
+      }
+
+    );
+  }
+}

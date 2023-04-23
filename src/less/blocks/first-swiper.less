@@ -1,0 +1,65 @@
+/*------------------------------ first-swiper ----------------------------------*/
+
+.first-swiper {
+
+  .swiper {
+
+    .lg-block( {
+        padding-bottom: 45px;
+      }
+
+    );
+
+    .sm-block( {
+        padding-bottom: 95px;
+      }
+
+    );
+  }
+
+  .swiper-pagination {
+    z-index      : 1000;
+    left         : 50%;
+    right        : 0;
+    bottom       : 0;
+    width        : auto;
+    height       : 45px;
+    padding-right: 40px;
+    .flex-align-center();
+    column-gap      : 18px;
+    justify-content : flex-end;
+    background-color: #fff;
+
+    .xxl-block( {
+        left: 70%;
+      }
+
+    );
+
+    .lg-block( {
+        left           : 0;
+        padding        : 0;
+        justify-content: center;
+      }
+
+    );
+
+    .sm-block( {}
+
+    );
+  }
+
+  .swiper-pagination-bullet {
+    width        : 13px;
+    height       : 13px;
+    margin       : 0 !important;
+    background   : #FFFFFF;
+    border       : 1px solid #E26D5C;
+    border-radius: 50%;
+    opacity      : 1;
+
+    &.swiper-pagination-bullet-active {
+      background: #E26D5C;
+    }
+  }
+}

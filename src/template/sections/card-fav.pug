@@ -1,0 +1,30 @@
+// card
+
+.card
+
+  .card__header
+
+    a.card__img(href="#")
+
+      picture
+        source(srcset="img/webp/img2.webp" type="image/webp")
+        img(src="img/img2.jpg" alt="")
+
+      picture
+        source(srcset="img/webp/img3.webp" type="image/webp")
+        img(src="img/img3.jpg" alt="")
+
+    a.card__fav.active(href="#")
+      svg: use(href="img/icons/sprite.svg#heart-stroke")
+
+    p.card__collection Viennese classics
+
+  p.card__price 245 600р
+
+  a.card__title(href="#") Витрина Венеция стеклянная с выдвижными ящиками
+
+  .card__color
+    img(src="img/color-black.jpg" alt="")
+    span Black dream +1
+
+// end card

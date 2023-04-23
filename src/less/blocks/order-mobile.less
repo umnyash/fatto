@@ -1,0 +1,41 @@
+/*------------------------------ order-mobile ----------------------------------*/
+
+.order-mobile {
+  display: none;
+  padding: 10px;
+
+  .lg-block( {
+      display   : flex;
+      column-gap: 10px;
+    }
+
+  );
+
+  &__item {
+    .flex-center();
+    width     : 70px;
+    height    : 70px;
+    padding   : 5px;
+    background: #F9F9F9;
+
+    &:last-child {
+      background: none;
+    }
+
+    img {
+      .contain();
+    }
+
+    span {
+      font-weight: 400;
+      font-size  : 16px;
+    }
+
+    svg {
+      width    : 24px;
+      height   : 24px;
+      fill     : @black;
+      transform: rotate(-90deg);
+    }
+  }
+}

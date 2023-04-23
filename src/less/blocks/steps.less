@@ -1,0 +1,236 @@
+/*------------------------------ steps ----------------------------------*/
+
+.steps {
+  margin-bottom: 80px;
+
+  .xxl-block( {
+      margin-bottom: 70px;
+    }
+
+  );
+
+  .xl-block( {
+      margin-bottom: 60px;
+    }
+
+  );
+
+  .sm-block( {
+      margin-bottom: 50px;
+    }
+
+  );
+
+  &__grid {
+    position             : relative;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items          : center;
+    column-gap           : 137px;
+
+    .xxl-block( {
+        column-gap: 130px;
+        height    : 180px;
+      }
+
+    );
+
+    .xl-block( {
+        grid-template-columns: 301px 263px 267px;
+        justify-content      : space-between;
+        column-gap           : 20px;
+      }
+
+    );
+
+    .lg-block( {
+        grid-template-columns: 1fr;
+        row-gap              : 20px;
+        max-width            : 310px;
+        height               : auto;
+        margin               : 0 auto;
+      }
+
+    );
+
+    .sm-block( {
+        width: 270px;
+      }
+
+    );
+  }
+
+  &__item {
+    .flex-align-center();
+    position  : relative;
+    flex-wrap : nowrap;
+    column-gap: 40px;
+
+    .xxl-block( {
+        column-gap: 30px;
+      }
+
+    );
+
+    .xl-block( {
+        column-gap: 20px;
+      }
+
+    );
+
+    .sm-block( {
+        column-gap: 15px;
+      }
+
+    );
+
+    &::after {
+      content        : '';
+      position       : absolute;
+      top            : 50%;
+      right          : -90px;
+      transform      : translateY(-50%);
+      width          : 39px;
+      height         : 221px;
+      background     : url(../img/icons/diagonal.svg) center no-repeat;
+      background-size: contain;
+
+      .xxl-block( {
+          width : 40px;
+          height: 180px;
+        }
+
+      );
+
+      .xl-block( {
+          right: -55px;
+        }
+
+      );
+
+      .lg-block( {
+          display: none;
+        }
+
+      );
+    }
+
+    &:first-child {
+
+      .steps__num {
+        width: 108px;
+
+        .xxl-block( {
+            width: 59px;
+          }
+
+        );
+
+        .sm-block( {
+            width: 49px;
+          }
+
+        );
+      }
+    }
+
+    &:nth-child(2) {
+
+      .steps__num {
+        width: 139px;
+
+        .xxl-block( {
+            width: 76px;
+          }
+
+        );
+
+        .sm-block( {
+            width: 63px;
+          }
+
+        );
+      }
+    }
+
+    &:nth-child(3) {
+
+      .steps__num {
+        width: 146px;
+
+        .xxl-block( {
+            width: 80px;
+          }
+
+        );
+
+        .sm-block( {
+            width: 66px;
+          }
+
+        );
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__num {
+    flex       : none;
+    font-family: 'Inter';
+    font-style : italic;
+    font-weight: 700;
+    font-size  : 220px;
+    line-height: 266px;
+    color      : #fff;
+    text-shadow: 0px 1px 0 rgb(221, 221, 221), 0px -1px 0 rgb(221, 221, 221), 1px 0px 0 rgb(221, 221, 221), -1px 0px 0 rgb(221, 221, 221), 1px 1px 0 rgb(221, 221, 221), 1px -1px 0 rgb(221, 221, 221), -1px 1px 0 rgb(221, 221, 221), -1px -1px 0 rgb(221, 221, 221);
+
+    .xxl-block( {
+        font-size  : 120px;
+        line-height: 145px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size  : 100px;
+        line-height: 120px;
+      }
+
+    );
+  }
+
+  &__desc {
+    margin     : 0;
+    font-size  : 32px;
+    line-height: 1.1;
+    font-weight: 400;
+    color      : @black;
+
+    .xxl-block( {
+        font-size  : 24px;
+        line-height: 1;
+      }
+
+    );
+
+    .xl-block( {
+        font-size: 23px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 20px;
+      }
+
+    );
+
+    span {
+      display: block;
+      color  : @red;
+    }
+  }
+}

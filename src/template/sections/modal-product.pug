@@ -1,0 +1,94 @@
+// modal
+
+.modal.js-modal#js-modal-delpay
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    p.modal__title О доставке и оплате
+
+    include modal-article
+
+
+.modal.js-modal#js-modal-ask
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    p.modal__title Задать вопрос по товару
+
+    p.modal__text.modal__text--mb50 Оставьте заявку и мы обязательно ответим на все вопросы
+
+    form(action="")
+
+      .form-group
+        label ФИО
+          sup *
+        input(type="text" name="#" placeholder="Марина")
+
+      .form-group
+        label Телефон
+          sup *
+        input.phone(type="tel" name="#" placeholder="+7")
+
+      .form-group
+        label Комментарий
+        textarea(name="#")
+
+      button.form-btn(type="submit")
+        span Отправить заявку
+        span Отправить заявку
+
+      p.form-agree Нажимая на кнопку «Отправить заявку», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a>
+
+
+.modal.js-modal#js-modal-param
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    p.modal__title Индивидуальные параметры
+
+    p.modal__text.modal__text--mb50 Оставьте заявку и мы обязательно с вами свяжемся
+
+    form(action="")
+
+      .form-group
+        label ФИО
+          sup *
+        input(type="text" name="#" placeholder="Марина")
+
+      .form-group
+        label Телефон
+          sup *
+        input.phone(type="tel" name="#" placeholder="+7")
+
+      .form-group
+        label Пожелания к изменеям параметров товара
+        textarea(name="#")
+
+      button.form-btn(type="submit")
+        span Отправить заявку
+        span Отправить заявку
+
+      p.form-agree Нажимая на кнопку «Отправить заявку», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a>
+
+
+.modal.js-modal#js-modal-tocart
+
+  .modal__inner
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    p.modal__title Товар в корзине
+
+    include modal-basket
+
+// end modal

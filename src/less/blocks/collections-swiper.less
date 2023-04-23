@@ -1,0 +1,142 @@
+/*------------------------------ collections-swiper ----------------------------------*/
+
+.collections-swiper {
+  position: relative;
+
+  .md-block( {
+      margin-right  : calc(((100vw - @container-md) / 2 + 10px) * -1);
+      //margin-left : calc(((100vw - @container-md) / 2 + 10px) * -1);
+    }
+
+  );
+
+  .sm-block( {
+      margin-right: -10px;
+    }
+
+  );
+
+  &__nav {
+    .flex-align-center();
+    position   : absolute;
+    z-index    : 10;
+    left       : 0;
+    top        : 97px;
+    column-gap : 20px;
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+
+    .xxl-block( {
+        top      : 107px;
+        font-size: 32px;
+      }
+
+    );
+
+    .xl-block( {
+        top: 202px;
+      }
+
+    );
+
+    .md-block( {
+        top      : 0;
+        font-size: 28px;
+      }
+
+    );
+
+    .sm-block( {
+        width     : 100%;
+        column-gap: 10px;
+        padding   : 0 10px;
+        font-size : 22px;
+      }
+
+    );
+
+    .xxs-block( {
+        font-size: 18px;
+      }
+
+    );
+
+    >span {
+      color: #777777;
+
+      .xl-block( {
+          display: none;
+        }
+
+      );
+
+      .md-block( {
+          display     : block;
+          margin-right: 10px;
+        }
+
+      );
+    }
+  }
+
+  .swiper-prev {
+    .arrow();
+    position   : relative;
+    margin-left: 20px;
+
+    .xxl-block( {
+        margin-left: 10px;
+      }
+
+    );
+
+    .sm-block( {
+        width      : 56px;
+        height     : 56px;
+        margin-left: auto;
+      }
+
+    );
+
+    svg {
+
+      .sm-block( {
+          width : 40px;
+          height: 6px;
+        }
+
+      );
+    }
+  }
+
+  .swiper-next {
+    .arrow();
+    position   : relative;
+    margin-left: 20px;
+
+    .xxl-block( {
+        margin-left: 10px;
+      }
+
+    );
+
+    .sm-block( {
+        width      : 56px;
+        height     : 56px;
+        margin-left: 0;
+      }
+
+    );
+
+    svg {
+
+      .sm-block( {
+          width : 40px;
+          height: 6px;
+        }
+
+      );
+    }
+  }
+}

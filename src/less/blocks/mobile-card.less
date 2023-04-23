@@ -1,0 +1,50 @@
+/*------------------------------ mobile-card ----------------------------------*/
+
+.mobile-card {
+  .flex();
+  column-gap   : 6px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: calc(50% - 3px);
+
+    img {
+      width       : 100%;
+      height      : 100%;
+      aspect-ratio: 1.5;
+    }
+  }
+
+  &__right {
+    .flex-column();
+    justify-content: space-between;
+    width          : calc(50% - 3px);
+  }
+
+  &__name {
+    margin     : 0 0 10px;
+    font-weight: 400;
+    font-size  : 16px;
+    color      : #060915;
+
+    .sm-block( {
+        font-size  : 14px;
+        line-height: 18px;
+      }
+
+    );
+  }
+
+  &__btn {
+    .flex-center();
+    height     : 40px;
+    border     : 1px solid #DDDDDD;
+    font-weight: 400;
+    font-size  : 14px;
+    color      : #060915;
+  }
+}

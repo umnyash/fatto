@@ -1,0 +1,68 @@
+/*------------------------------ looked ----------------------------------*/
+
+.looked {
+  margin-bottom: 120px;
+  padding-top  : 40px;
+
+  .xxl-block( {
+      margin-bottom: 110px;
+    }
+
+  );
+
+  .xl-block( {
+      margin-bottom: 100px;
+    }
+
+  );
+
+  .sm-block( {
+      margin-bottom: 90px;
+    }
+
+  );
+
+  &__row {
+    .row-flex();
+    align-items: center;
+  }
+
+  &__left {
+    .col();
+    .size(2);
+    .size-xl(12);
+
+    .xl-block( {
+        margin-bottom: 40px;
+      }
+
+    );
+  }
+
+  &__right {
+    .col();
+    .size(8);
+    .size-lg(12);
+  }
+
+  &__title {
+    margin     : 0;
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+    color      : @black;
+
+    .xxl-block( {
+        font-size  : 32px;
+        line-height: 1;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 22px;
+      }
+
+    );
+  }
+}

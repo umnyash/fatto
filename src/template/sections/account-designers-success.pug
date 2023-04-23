@@ -1,0 +1,41 @@
+// account
+
+.account
+
+  p.account__name Анна Петрова
+
+  include acc-nav-designers
+
+  a.account-link(href="#")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Личный кабинет
+
+  p.design-title Для дизайнеров
+
+  .page-head.page-head--success
+
+    .page-head__bg
+      picture
+
+        source(srcset="img/webp/bg-designer-sm.webp" media="(max-width:575px)" type="image/webp")
+        source(srcset="img/bg-designer-sm.jpg" media="(max-width:575px)")
+
+        source(srcset="img/webp/bg-designer-private-md.webp" media="(max-width:1080px)" type="image/webp")
+        source(srcset="img/bg-designer-private-md.jpg" media="(max-width:1080px)")
+
+        source(srcset="img/webp/bg-designer-private-lg.webp" media="(max-width:1440px)" type="image/webp")
+        source(srcset="img/bg-designer-private-lg.jpg" media="(max-width:1440px)")
+
+        source(srcset="img/webp/bg-designer-private.webp" type="image/webp")
+        img(src="img/bg-designer-private.jpg" alt="")
+
+    .container
+
+      .page-head__text
+        p Ваша заявка успешно принята <br>и находится в обработке
+
+  a.account__exit.js-modal-show(href="#js-modal-exit")
+    svg: use(href="img/icons/sprite.svg#logout")
+    span Выйти
+
+// end account

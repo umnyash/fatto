@@ -1,0 +1,39 @@
+/*------------------------------ modal-search ----------------------------------*/
+
+.modal-search {
+  position  : absolute;
+  top       : 0;
+  left      : 0;
+  width     : 100%;
+  background: #fff;
+  z-index   : 9999;
+
+  .container {
+    position      : relative;
+    padding-top   : 40px;
+    padding-bottom: 34px;
+
+    .md-block( {
+        padding-top   : 69px;
+        padding-bottom: 30px;
+      }
+
+    );
+  }
+
+  .modal__close {
+    right: 10px;
+    top  : 15px;
+
+    .md-block( {
+        left: 25px;
+        top : 10px;
+      }
+
+    );
+
+    svg {
+      fill: @red;
+    }
+  }
+}

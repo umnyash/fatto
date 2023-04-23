@@ -1,0 +1,24 @@
+// modal
+
+.modal.js-modal#js-modal-exit
+
+  .modal__inner.modal__inner--cancel
+
+    a.modal__close.js-modal-close(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+
+    p.modal__text Вы уверены что хотите<br> прервать оформление?
+
+    p.modal__text-sm Введенные вами данные,<br> не сохранятся
+
+    .modal__btns
+
+      a.modal__btn(href="#")
+        span  Да
+        span  Да
+
+      a.modal__btn.js-modal-close(href="#")
+        span  Отмена
+        span  Отмена
+
+// end modal

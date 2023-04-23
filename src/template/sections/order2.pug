@@ -1,0 +1,44 @@
+// order
+
+.order
+
+  .order__header
+
+    p.order__title
+      span Заказ №56777
+      span от 1 авг 2022
+
+    p.order__status.order__status--red Новый, не оплачен, ждет оплаты
+
+  include order-mobile
+
+  .order__grid
+
+    .order__top
+
+      .order__back
+        svg: use(href="img/icons/sprite.svg#arrow-back")
+        span Мои заказы
+
+      p.order__mob-title Заказ №56777
+
+    .order__area
+
+      include order-goods2
+
+      a.order__repeat(href="#")
+        svg: use(href="img/icons/sprite.svg#replay")
+        span Повторить заказ
+
+    .order__area
+
+      include order-info2
+
+      .order__btns
+
+        a.order__btn(href="#")
+          span Оплатить онлайн
+          span Оплатить онлайн
+
+
+// end order

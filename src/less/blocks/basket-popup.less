@@ -1,0 +1,60 @@
+/*------------------------------ basket-popup ----------------------------------*/
+
+.basket-popup {
+  .flex-align-center();
+  justify-content: space-between;
+  row-gap        : 20px;
+  position       : fixed;
+  z-index        : 1000;
+  top            : -105%;
+  left           : 0;
+  right          : 0;
+  padding        : 22px 20px;
+  background     : #FFFFFF;
+  border-bottom  : 1px solid #ddd;
+  transition     : top .6s;
+
+  &.open {
+    top: 0;
+  }
+
+  &__link {
+    .flex-align-center();
+    column-gap: 10px;
+
+    span {
+      font-weight: 400;
+      font-size  : 18px;
+      color      : @black;
+    }
+
+    svg {
+      width : 20px;
+      height: 20px;
+      fill  : @black;
+    }
+  }
+
+  &__info {
+    display              : grid;
+    grid-template-columns: 95px auto;
+    row-gap              : 5px;
+    column-gap           : 10px;
+
+    span {
+
+      &:nth-child(2n - 1) {
+        width      : 104px;
+        font-weight: 400;
+        font-size  : 12px;
+        line-height: 1.2;
+      }
+
+      &:nth-child(2n) {
+        font-weight: 500;
+        font-size  : 14px;
+        line-height: 1;
+      }
+    }
+  }
+}

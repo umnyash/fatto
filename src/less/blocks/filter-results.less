@@ -1,0 +1,75 @@
+/*------------------------------ filter-results ----------------------------------*/
+
+.filter-results {
+  .flex();
+  gap       : 30px;
+  margin-top: 30px;
+
+  .sm-block( {
+      row-gap: 20px;
+    }
+
+  );
+
+  &__item {
+    .flex-align-center();
+    flex-wrap  : nowrap;
+    padding    : 10px 15px;
+    gap        : 15px;
+    background : #F9F9F9;
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 1;
+
+    .sm-block( {
+        gap      : 10px;
+        padding  : 5px 10px;
+        font-size: 16px;
+      }
+
+    );
+
+    .xs-block( {
+        width: 100%;
+      }
+
+    );
+
+    .xxs-block( {
+        gap: 5px;
+      }
+
+    );
+
+    img {
+      width : 24px;
+      height: 24px;
+    }
+  }
+
+  &__del {
+    display: block;
+    width  : 20px;
+    height : 20px;
+
+    .xs-block( {
+        margin-left: auto;
+      }
+
+    );
+
+    svg {
+      width : 100%;
+      height: 100%;
+      fill  : @black;
+      .transition();
+    }
+
+    &:hover {
+
+      svg {
+        fill: @red;
+      }
+    }
+  }
+}

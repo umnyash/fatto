@@ -1,0 +1,258 @@
+/*------------------------------ card-basket ----------------------------------*/
+
+.card-basket {
+  .flex-align-center();
+  position       : relative;
+  justify-content: space-between;
+  row-gap        : 20px;
+  padding-bottom : 30px;
+  border-bottom  : 1px solid #DDDDDD;
+
+  .xl-block( {
+      padding-bottom: 20px;
+    }
+
+  );
+
+  .xs-block( {
+      margin-left  : -20px;
+      margin-right : -20px;
+      padding-left : 20px;
+      padding-right: 20px;
+    }
+
+  );
+
+  &__left {
+    display              : grid;
+    grid-template-columns: 216px 1fr;
+    align-items          : center;
+    column-gap           : 50px;
+    width                : 606px;
+
+    .xxl-block( {
+        grid-template-columns: 150px 1fr;
+        column-gap           : 15px;
+        width                : 464px;
+      }
+
+    );
+
+    .xl-block( {
+        grid-template-columns: 140px 1fr;
+        width                : 100%;
+        padding-right        : 80px;
+        column-gap           : 20px;
+      }
+
+    );
+
+    .sm-block( {
+        padding-right: 0;
+      }
+
+    );
+
+    .xs-block( {
+        grid-template-columns: 95px 1fr;
+        column-gap           : 15px;
+      }
+
+    );
+  }
+
+  &__img {
+    display   : block;
+    background: #F8F8F8;
+    height    : 190px;
+
+    .xxl-block( {
+        height: 127px;
+      }
+
+    );
+
+    .xl-block( {
+        height: 119px;
+      }
+
+    );
+
+    .xs-block( {
+        height: 78px;
+      }
+
+    );
+
+    img {
+      .contain();
+      mix-blend-mode: darken;
+    }
+  }
+
+  &__name {
+    display    : block;
+    margin     : 0 0 20px;
+    font-weight: 500;
+    font-size  : 20px;
+    line-height: 1.1;
+    color      : @black;
+
+    .xxl-block( {
+        font-size: 18px;
+      }
+
+    );
+
+    .xl-block( {
+        margin-bottom: 10px;
+      }
+
+    );
+
+    .xs-block( {
+        font-size: 16px;
+      }
+
+    );
+  }
+
+  &__info {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap           : 16px;
+    row-gap              : 5px;
+
+    .xxl-block( {
+        column-gap: 10px;
+      }
+
+    );
+
+    .xl-block( {
+        column-gap: 5px;
+      }
+
+    );
+
+    .xs-block( {
+        grid-template-rows: repeat(4, auto);
+        justify-content   : space-between;
+        row-gap           : 0;
+      }
+
+    );
+
+    span {
+      font-weight: 400;
+      font-size  : 14px;
+      line-height: 18px;
+      color      : #919191;
+
+      &:nth-child(5) {
+
+        .xs-block( {
+            grid-area  : ~'3 / 1 / 4 / 3';
+            padding-top: 10px;
+          }
+
+        );
+      }
+
+      &:nth-child(6) {
+
+        .xs-block( {
+            grid-area : ~'4 / 1 / 5 / 3';
+          }
+
+        );
+      }
+    }
+  }
+
+  &__right {
+    .flex-between();
+    align-items: center;
+    width      : 350px;
+
+    .xxl-block( {
+        width: 300px;
+      }
+
+    );
+
+    .xl-block( {
+        width: 100%;
+      }
+
+    );
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size  : 20px;
+    line-height: 1.1;
+  }
+
+  &__btns {
+    .flex();
+    column-gap    : 30px;
+    position      : absolute;
+    z-index       : 10;
+    bottom        : 0;
+    right         : 0;
+    padding-bottom: 6px;
+    opacity       : 0;
+    .transition();
+
+    .xl-block( {
+        position      : static;
+        opacity       : 1;
+        flex-direction: column;
+        align-items   : flex-end;
+        row-gap       : 20px;
+        width         : 100%;
+        padding-bottom: 0;
+      }
+
+    );
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size  : 14px;
+    line-height: 18px;
+    color      : #919191;
+    .transition();
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  &:hover {
+
+    .card-basket__btns {
+      opacity: 1;
+    }
+  }
+
+  &__color {
+    .flex-align-center();
+    column-gap: 8px;
+
+    img {
+      width        : 12px;
+      height       : 12px;
+      border-radius: 50%;
+      object-fit   : cover;
+    }
+
+    span {
+      font-weight: 400;
+      font-size  : 14px;
+      line-height: 18px;
+      color      : #919191;
+    }
+  }
+}

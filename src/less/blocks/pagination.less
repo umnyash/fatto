@@ -1,0 +1,47 @@
+/*------------------------------ pagination ----------------------------------*/
+
+.pagination {
+  .flex-align-center();
+  column-gap     : 20px;
+  justify-content: flex-end;
+  margin-bottom  : 80px;
+  padding        : 0px 20px 10px;
+  border-bottom  : 1px solid #DDDDDD;
+
+  .md-block( {
+      justify-content: center;
+    }
+
+  );
+
+  &__link {
+    .flex-center();
+    height     : 44px;
+    font-weight: 400;
+    font-size  : 20px;
+    color      : #919191;
+    .transition();
+
+    .md-block( {
+        height: 32px;
+      }
+
+    );
+
+    &:hover {
+      color: @red;
+    }
+
+    &.current {
+      font-size  : 38px;
+      line-height: 1;
+      color      : @black;
+
+      .md-block( {
+          font-size: 32px;
+        }
+
+      );
+    }
+  }
+}

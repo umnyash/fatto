@@ -1,0 +1,73 @@
+// company
+
+.company
+
+  p.company__title Создадим качественный интерьер
+
+  .company__img
+
+    picture
+
+      source(srcset="img/webp/img-company1-sm.webp" media="(max-width:575px)" type="image/webp")
+      source(srcset="img/img-company1-sm.jpg" media="(max-width:575px)")
+
+      source(srcset="img/webp/img-company1-lg.webp" media="(max-width:1659px)" type="image/webp")
+      source(srcset="img/img-company1-lg.jpg" media="(max-width:1659px)")
+
+      source(srcset="img/webp/img-company1.webp" type="image/webp")
+      img(src="img/img-company1.jpg" alt="")
+
+  .company__row
+
+    .company__left
+
+      p.left мы считаем, что каждый заслуживает пространства для <span>процветания<span>
+
+    .company__right
+
+      p Пространство, где можно быть полностью, по-настоящему самим собой, без бремени того, чтобы быть дороже или вынужденным выбирать "быструю мебель".
+
+  .company__video
+
+    video(src="video/video.mp4" autoplay loop muted playsinline)
+
+  include blockquote
+
+  include about
+
+  include about-desc
+
+  .company__video.company__video--lg
+
+    video(src="video/video.mp4" autoplay loop muted playsinline)
+
+  .company__row
+
+    .company__left
+
+      p.center Полный технологический процесс: <span>от проекта до сборки<span>
+
+    .company__right
+
+      p На нашем производстве работает команда профессионалов-мебельщиков с большим опытом работы и отлаженной системой повышения квалификации персонала
+
+      p Мы постоянно совершенствуем производственные процессы и используемые нами технологии
+
+  .company__gallery
+
+    picture
+      source(srcset="img/webp/img13.webp" type="image/webp")
+      img(src="img/img13.jpg" alt="")
+
+    picture
+      source(srcset="img/webp/img14.webp" type="image/webp")
+      img(src="img/img13.jpg" alt="")
+
+    picture
+      source(srcset="img/webp/img15.webp" type="image/webp")
+      img(src="img/img13.jpg" alt="")
+
+  include furni
+
+
+// end company

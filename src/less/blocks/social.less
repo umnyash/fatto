@@ -1,0 +1,73 @@
+/*------------------------------ social ----------------------------------*/
+
+.social {
+  .flex-align-center();
+  column-gap : 16px;
+  margin-left: auto;
+
+  .xxl-block( {
+      column-gap: 20px;
+    }
+
+  );
+
+  .xl-block( {
+      margin-right: auto;
+    }
+
+  );
+
+  .sm-block( {
+      flex-direction: column;
+      row-gap       : 15px;
+    }
+
+  );
+
+  &__label {
+    font-size  : 20px;
+    line-height: 1.3;
+    color      : @black;
+
+    .xxl-block( {
+        font-size: 18px;
+      }
+
+    );
+  }
+
+  &__nav {
+    .flex-align-center();
+    column-gap: 20px;
+
+    .sm-block( {
+        column-gap: 50px;
+      }
+
+    );
+
+    .xs-block( {
+        column-gap: 30px;
+      }
+
+    );
+  }
+
+  &__link {
+    display: block;
+    width  : 32px;
+    height : 32px;
+
+    img {
+      .contain();
+      .transition();
+    }
+
+    &:hover {
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

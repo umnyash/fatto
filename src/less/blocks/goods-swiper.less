@@ -1,0 +1,148 @@
+/*------------------------------ goods-swiper ----------------------------------*/
+
+.goods-swiper {
+  position: relative;
+
+  .lg-block( {
+      margin-right : calc(((100vw - @container-lg) / 2 + 10px) * -1);
+    }
+
+  );
+
+  .md-block( {
+      margin-right  : calc(((100vw - @container-md) / 2 + 10px) * -1);
+      //margin-left : calc(((100vw - @container-md) / 2 + 10px) * -1);
+    }
+
+  );
+
+  .sm-block( {
+      margin-right : -10px;
+    }
+
+  );
+
+  .swiper-slide {
+
+    .lg-block( {
+        width: 220px;
+      }
+
+    );
+
+    .md-block( {
+        width: 200px;
+      }
+
+    );
+
+    .sm-block( {
+        width: 180px;
+      }
+
+    );
+
+    .xs-block( {
+        width: 165px;
+      }
+
+    );
+
+    .xxs-block( {
+        width: 165px;
+      }
+
+    );
+  }
+
+  .swiper-prev {
+    .arrow();
+    position: absolute;
+    z-index : 10;
+    right   : 128px;
+    bottom  : -98px;
+
+    .xxl-block( {
+        bottom: -90px;
+        right : 104px;
+      }
+
+    );
+
+    .lg-block( {
+        display: none;
+      }
+
+    );
+
+    &.swiper-button-disabled {
+
+      svg {
+        fill: #DDDDDD;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+
+  .swiper-next {
+    .arrow();
+    position: absolute;
+    z-index : 10;
+    right   : 0;
+    bottom  : -98px;
+
+    .xxl-block( {
+        bottom: -90px;
+      }
+
+    );
+
+    .lg-block( {
+        display: none;
+      }
+
+    );
+
+    &.swiper-button-disabled {
+
+      svg {
+        fill: #DDDDDD;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+
+  .swiper-horizontal>.swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom    : -54px;
+    left      : 0;
+    right     : 282px;
+    width     : auto;
+    height    : 2px;
+    background: #DDDDDD;
+
+    .xxl-block( {
+        right: 206px;
+      }
+
+    );
+  }
+
+  .swiper-scrollbar-drag {
+    background: @black;
+  }
+}

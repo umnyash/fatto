@@ -1,0 +1,123 @@
+/*------------------------------ looked-swiper ----------------------------------*/
+
+.looked-swiper {
+  position: relative;
+
+  .lg-block( {
+      margin-right: -100px;
+    }
+
+  );
+
+  .looked-swiper__item {
+    .flex-center();
+    position        : relative;
+    background-color: #F8F8F8;
+
+    &::before {
+      content         : '';
+      position        : absolute;
+      top             : 0;
+      left            : 0;
+      width           : 100%;
+      height          : 100%;
+      background-color: rgba(6, 9, 21, 0.3);
+      opacity         : 0;
+      .transition();
+    }
+
+    &:hover {
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .swiper-slide {
+
+    .lg-block( {
+        width: 200px;
+      }
+
+    );
+
+    .md-block( {
+        width: 160px;
+      }
+
+    );
+
+    .sm-block( {
+        width: 130px;
+      }
+
+    );
+
+    .xs-block( {
+        width: 100px;
+      }
+
+    );
+
+    .xxs-block( {
+        width: 120px;
+      }
+
+    );
+  }
+
+  .swiper-prev {
+    .arrow();
+    position: absolute;
+    z-index : 10;
+    left    : calc(100% + 56px);
+    bottom  : -31px;
+
+    .xxl-block( {
+        left  : calc(100% + 30px);
+        bottom: -24px;
+      }
+
+    );
+
+    .xl-block( {
+        left : calc(100% + 144px);
+      }
+
+    );
+
+    .lg-block( {
+        display: none;
+      }
+
+    );
+  }
+
+  .swiper-next {
+    .arrow();
+    position: absolute;
+    z-index : 10;
+    left    : calc(100% + 185px);
+    bottom  : -31px;
+
+    .xxl-block( {
+        left  : calc(100% + 132px);
+        bottom: -24px;
+      }
+
+    );
+
+    .xl-block( {
+        left : calc(100% + 246px);
+      }
+
+    );
+
+    .lg-block( {
+        display: none;
+      }
+
+    );
+  }
+}

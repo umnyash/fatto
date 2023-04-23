@@ -1,0 +1,31 @@
+// subscribe
+
+.subscribe
+
+  .container
+
+    .subscribe__row
+
+      .subscribe__col
+
+        p.subscribe__title Узнавайте о новинках сразу
+
+        form.subscribe__form(action="")
+
+          .form-group
+            label Почта
+            input(type="text" name="" placeholder="ivanov@mail.ru")
+
+          button.subscribe__btn(type="submit")
+            span Подписаться
+            span Подписаться
+
+        p.subscribe__agree Нажимая на кнопку &laquo;Подписаться&raquo;, я принимаю условия<br> <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a>
+
+  .subscribe__img
+    picture
+      source(srcset="img/webp/img-subscribe.webp" type="image/webp")
+      img(src="img/img-subscribe.jpg" alt="")
+
+
+// end subscribe

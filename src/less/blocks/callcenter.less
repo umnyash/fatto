@@ -1,0 +1,53 @@
+/*------------------------------ callcenter ----------------------------------*/
+
+.callcenter {
+  .flex();
+  column-gap: 8px;
+  margin-top: -2px;
+
+  &__icon {
+    width : 24px;
+    height: 24px;
+
+    svg {
+      width : 100%;
+      height: 100%;
+      fill  : #060915;
+    }
+  }
+
+  &__desc {
+
+    a {
+      font-weight: 500;
+      font-size  : 24px;
+      color      : #060915;
+      line-height: 1.2;
+      .transition();
+
+      .xxl-block( {
+          font-size: 20px;
+        }
+
+      );
+
+      &:hover {
+        color: @red;
+      }
+    }
+
+    p {
+      margin     : 0;
+      font-size  : 16px;
+      line-height: 21px;
+      color      : #777777;
+
+      .xxl-block( {
+          font-size  : 14px;
+          line-height: 18px;
+        }
+
+      );
+    }
+  }
+}

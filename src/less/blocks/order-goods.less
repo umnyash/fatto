@@ -1,0 +1,64 @@
+/*------------------------------ order-goods ----------------------------------*/
+
+.order-goods {
+  margin-bottom: 30px;
+
+  .lg-block( {
+      margin-bottom: 50px;
+    }
+
+  );
+
+  &__header {
+    .flex();
+    column-gap : 30px;
+    row-gap    : 5px;
+    margin     : 0 0 30px;
+    font-weight: 400;
+    font-size  : 20px;
+    line-height: 1.3;
+
+    .xs-block( {
+        flex-direction: column;
+      }
+
+    );
+  }
+
+  &__list {
+    max-width      : 502px;
+    max-height     : 482px;
+    padding-right  : 50px;
+    overflow-y     : auto;
+    scrollbar-width: thin;
+    scrollbar-color: #919191 #DDDDDD;
+
+    .xxl-block( {
+        max-width    : 492px;
+        padding-right: 40px;
+      }
+
+    );
+
+    .lg-block( {
+        max-height: none;
+        overflow  : visible;
+      }
+
+    );
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #DDDDDD;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #919191;
+      border-radius   : 0;
+      border          : none;
+    }
+  }
+}

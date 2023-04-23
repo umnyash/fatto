@@ -1,0 +1,26 @@
+/*------------------------------ tabs-nav ----------------------------------*/
+
+.tabs-nav {
+  .flex();
+  column-gap: 40px;
+
+  &__item {
+    .flex-center();
+    height       : 40px;
+    padding      : 0 24px;
+    border       : 1px solid #B3BDD2;
+    border-radius: 34px;
+    font-size    : 20px;
+    color        : #535355;
+    .transition();
+
+    &.active {
+      color           : #262221;
+      background-color: #DAD9DE;
+    }
+
+    &:hover {
+      background: #DAD9DE;
+    }
+  }
+}

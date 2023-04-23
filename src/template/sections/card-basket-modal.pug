@@ -1,0 +1,23 @@
+// card-basket
+
+.card-basket
+
+  a.card-basket__img(href="#")
+    img(src="img/img1.png" alt="")
+
+  .card-basket__desc
+
+    a.card-basket__name(href="#") Витрина Венеция стеклянная с выдвижными ящиками
+
+    .card-basket__color
+      img(src="img/color-black.jpg" alt="")
+      span Black dream
+
+  include quantity
+
+  span.card-basket__price 245 600р
+
+  a.card-basket__del.js-modal-basket-del(href="#")
+    svg: use(href="img/icons/sprite.svg#trash")
+
+// end card-basket

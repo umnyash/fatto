@@ -1,0 +1,39 @@
+// account
+
+.account
+
+  p.account__name Анна Петрова
+
+  include acc-nav-designers
+
+  a.account-link(href="#")
+    svg: use(href="img/icons/sprite.svg#arrow-back")
+    span Личный кабинет
+
+  p.design-title Для дизайнеров
+
+  .page-head.page-head--discount
+
+    .page-head__bg
+      picture
+
+        source(srcset="img/webp/bg-discount-sm.webp" media="(max-width:575px)" type="image/webp")
+        source(srcset="img/bg-discount-sm.jpg" media="(max-width:575px)")
+
+        source(srcset="img/webp/bg-discount-md.webp" media="(max-width:1080px)" type="image/webp")
+        source(srcset="img/bg-discount-md.jpg" media="(max-width:1080px)")
+
+        source(srcset="img/webp/bg-discount.webp" type="image/webp")
+        img(src="img/bg-discount.jpg" alt="")
+
+    .container
+
+      .page-head__text
+        p Для вас доступна скидка!
+        p скидка в 10% на весь ассортимент<br> по промокоду <span>DFUU44</span>
+
+  a.account__exit.js-modal-show(href="#js-modal-exit")
+    svg: use(href="img/icons/sprite.svg#logout")
+    span Выйти
+
+// end account

@@ -1,0 +1,49 @@
+/*------------------------------ breadcrumbs ----------------------------------*/
+
+.breadcrumbs {
+  .flex();
+  align-items  : center;
+  margin-bottom: 50px;
+  padding-top  : 30px;
+  row-gap      : 8px;
+  column-gap   : 5px;
+
+  .xxl-block( {
+      margin-bottom: 40px;
+    }
+
+  );
+
+  .sm-block( {
+      justify-content: center;
+      margin-bottom  : 30px;
+    }
+
+  );
+
+  &__item {
+    position     : relative;
+    font-weight  : 400;
+    font-size    : 16px;
+    line-height  : 21px;
+    color        : @black;
+    text-align   : center;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__link {
+    .link();
+    color        : @red;
+    padding-right: 15px;
+
+    &::before {
+      content   : '/';
+      position  : absolute;
+      right     : 0;
+      width     : 10px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+// modal-basket
+
+.modal-basket
+
+  .modal-basket__list
+
+    .modal-basket__item
+
+      include card-basket-modal
+
+      .modal-basket__remove
+
+        .modal-basket__rem-left
+          p Товар удален
+          a(href="#")
+            svg: use(href="img/icons/sprite.svg#close")
+            span Отменить
+
+        .modal-basket__rem-img
+          img(src="img/img1.png" alt="")
+
+    .modal-basket__item
+
+      include card-basket-modal
+
+      .modal-basket__remove
+
+        .modal-basket__rem-left
+          p Товар удален
+          a(href="#")
+            svg: use(href="img/icons/sprite.svg#close")
+            span Отменить
+
+        .modal-basket__rem-img
+          img(src="img/img1.png" alt="")
+
+    .modal-basket__item
+
+      include card-basket-modal
+
+      .modal-basket__remove
+
+        .modal-basket__rem-left
+          p Товар удален
+          a(href="#")
+            svg: use(href="img/icons/sprite.svg#close")
+            span Отменить
+
+        .modal-basket__rem-img
+          img(src="img/img1.png" alt="")
+
+  .modal-basket__total
+
+    div
+      span Итого
+      span 3 товара
+
+    div
+      span На сумму
+      span 245 600р
+
+
+  a.modal-basket__checkout(href="#")
+    span Оформить заказ
+    span Оформить заказ
+
+  a.modal-basket__tocart(href="#")
+    span Перейти в корзину
+    span Перейти в корзину
+
+// end modal-basket

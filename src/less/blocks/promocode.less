@@ -1,0 +1,78 @@
+/*------------------------------ promocode ----------------------------------*/
+
+.promocode {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #DDDDDD;
+
+  .xxl-block( {
+      margin-bottom: 70px;
+    }
+
+  );
+
+  .sm-block( {
+      margin-bottom: 50px;
+    }
+
+  );
+
+  &__toggle {
+    .flex-between();
+    align-items   : center;
+    padding-bottom: 10px;
+    cursor        : pointer;
+
+    span {
+      font-weight: 400;
+      font-size  : 18px;
+      line-height: 100%;
+      .transition();
+    }
+
+    svg {
+      width : 14px;
+      height: 14px;
+      fill  : @black;
+      .transition();
+    }
+
+    &:hover {
+
+      span {
+        color: @red;
+      }
+
+      svg {
+        fill: @red;
+      }
+    }
+
+    &.open {
+
+      svg {
+        transform: rotateX(180deg);
+        fill     : @red;
+      }
+    }
+  }
+
+  &__hidden {
+    display: none;
+    padding: 30px 0;
+
+    .sm-block( {
+        padding: 20px 0 30px;
+      }
+
+    );
+
+    .form-group {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    .btn();
+    width: 100%;
+  }
+}

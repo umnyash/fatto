@@ -1,0 +1,149 @@
+/*------------------------------ scrollup ----------------------------------*/
+
+.scrollup {
+  position : fixed;
+  z-index  : 3000;
+  left     : 50%;
+  transform: translateX(-50%);
+  bottom   : 20px;
+  display  : none;
+
+  .xxl-block( {
+      left     : auto;
+      right    : 20px;
+      bottom   : 65px;
+      transform: none;
+    }
+
+  );
+
+  .xl-block( {
+      bottom: 70px;
+    }
+
+  );
+
+  .lg-block( {
+      bottom: 30px;
+      right : 25px;
+    }
+
+  );
+
+  .sm-block( {
+      right : 21px;
+      bottom: 25px;
+    }
+
+  );
+
+  .xs-block( {
+      bottom: 50px;
+    }
+
+  );
+
+  &__wrap {
+    .flex-center();
+    column-gap   : 30px;
+    width        : 170px;
+    height       : 40px;
+    margin       : 0;
+    border-radius: 20px;
+    border       : 1px solid transparent;
+    background   : #FFFFFF;
+    cursor       : pointer;
+    .transition();
+
+    .xxl-block( {
+        width     : 140px;
+        height    : 36px;
+        column-gap: 20px;
+      }
+
+    );
+
+    .xl-block( {
+        width : 100px;
+        height: 30px;
+      }
+
+    );
+
+    .lg-block( {
+        column-gap: 15px;
+      }
+
+    );
+
+    .sm-block( {
+        width     : 80px;
+        height    : 26px;
+        column-gap: 10px;
+      }
+
+    );
+  }
+
+  span {
+    margin-bottom: 2px;
+    font-size    : 20px;
+    color        : @black;
+    .transition();
+
+    .xxl-block( {
+        font-size: 18px;
+      }
+
+    );
+
+    .lg-block( {
+        font-size: 16px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 14px;
+      }
+
+    );
+  }
+
+  svg {
+    width : 6px;
+    height: 16px;
+    fill  : @black;
+    .transition();
+
+    .xxl-block( {
+        height: 14px;
+      }
+
+    );
+
+    .lg-block( {
+        height: 13px;
+      }
+
+    );
+
+    .sm-block( {
+        width : 4px;
+        height: 12px;
+      }
+
+    );
+  }
+
+  &:hover {
+
+    span {
+      color: @red;
+    }
+
+    svg {
+      fill: @red;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/*------------------------------ range-price ----------------------------------*/
+
+.range-price {
+
+  &__value {
+    .flex-between();
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 1;
+
+    .lg-block( {
+        font-size: 16px;
+      }
+
+    );
+
+    .xs-block( {
+        font-size: 14px;
+      }
+
+    );
+  }
+
+  .ui-slider {
+    margin-bottom: 30px;
+
+    .ui-slider-handle {
+      top          : -9px;
+      width        : 20px;
+      height       : 20px;
+      background   : #FFFFFF;
+      border       : 1px solid @black;
+      border-radius: 50%;
+    }
+  }
+
+  .ui-slider-horizontal {
+    height    : 3px;
+    background: #DDDDDD;
+    border    : none !important;
+  }
+
+  .ui-widget-header {
+    background: @red;
+  }
+}

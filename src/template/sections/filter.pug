@@ -1,0 +1,24 @@
+// filter
+
+.filter
+
+  .filter__header
+
+    a.filter__btn.js-modal-show(href="#js-modal-filter")
+      svg: use(href="img/icons/sprite.svg#filter")
+      span Фильтры
+
+    include sort
+
+  include filter-results
+
+  .filter__footer
+
+    .filter__count
+      span Найденно результатов: 32
+
+    a.filter__reset(href="#")
+      svg: use(href="img/icons/sprite.svg#close")
+      span Сбросить весь фильтр
+
+// end filter

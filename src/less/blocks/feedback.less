@@ -1,0 +1,168 @@
+/*------------------------------ feedback ----------------------------------*/
+
+.feedback {
+  position     : relative;
+  z-index      : 10;
+  height       : 600px;
+  margin-bottom: 120px;
+  padding-top  : 80px;
+  padding-left : 140px;
+
+  .xxl-block( {
+      height       : 540px;
+      margin-bottom: 110px;
+      padding-top  : 60px;
+      padding-left : 100px;
+    }
+
+  );
+
+  .xl-block( {
+      height       : 429px;
+      margin-bottom: 100px;
+      padding-top  : 40px;
+      padding-left : 80px;
+    }
+
+  );
+
+  .lg-block( {
+      height      : 400px;
+      padding-left: 40px;
+    }
+
+  );
+
+  .sm-block( {
+      height       : auto;
+      aspect-ratio : 1.12;
+      margin-bottom: 90px;
+      padding      : 25px 0 0;
+      text-align   : center;
+    }
+
+  );
+
+  &__bg {
+    position: absolute;
+    z-index : -1;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+
+    img {
+      .cover();
+      display: block;
+    }
+  }
+
+  &__text {
+    margin     : 0 0 30px;
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+
+    .xxl-block( {
+        margin-bottom: 20px;
+        font-size    : 32px;
+      }
+
+    );
+
+    .xl-block( {
+        margin-bottom: 15px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 22px;
+      }
+
+    );
+  }
+
+  &__title {
+    margin     : 0 0 30px;
+    font-weight: 300;
+    font-size  : 55px;
+    line-height: 1;
+
+    .xxl-block( {
+        margin-bottom: 20px;
+        font-size    : 46px;
+      }
+
+    );
+
+    .xl-block( {
+        margin-bottom: 15px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 28px;
+      }
+
+    );
+  }
+
+  &__contacts {
+    .flex-align-center();
+    column-gap: 50px;
+    row-gap   : 20px;
+
+    .sm-block( {
+        flex-direction: column;
+      }
+
+    );
+  }
+
+  &__tel {
+    .link();
+    font-weight: 300;
+    font-size  : 38px;
+    line-height: 1.15;
+    color      : #E26D5C;
+
+    .xxl-block( {
+        font-size: 32px;
+      }
+
+    );
+
+    .sm-block( {
+        font-size: 22px;
+      }
+
+    );
+  }
+
+  .social {
+    margin-left: 0;
+
+    .sm-block( {
+        margin-left: auto;
+      }
+
+    );
+
+    &__nav {
+      column-gap: 50px;
+
+      .sm-block( {
+          column-gap : 30px;
+        }
+
+      );
+    }
+
+    &__link {
+      width : 40px;
+      height: 40px;
+    }
+  }
+}

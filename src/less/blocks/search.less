@@ -1,0 +1,132 @@
+/*------------------------------ search ----------------------------------*/
+
+.search {
+  position: relative;
+  width   : 425px;
+
+  .xxl-block( {
+      width: 320px;
+    }
+
+  );
+
+  .xl-block( {
+      width    : 100%;
+      max-width: 622px;
+      margin   : 0 auto;
+    }
+
+  );
+
+  &__form {
+    position: relative;
+
+    button {
+      position  : absolute;
+      z-index   : 10;
+      right     : 0;
+      top       : 0;
+      width     : 42px;
+      height    : 42px;
+      padding   : 4px 0 0;
+      border    : none;
+      background: transparent;
+      cursor    : pointer;
+
+      svg {
+        width : 20px;
+        height: 20px;
+        fill  : @black;
+        .transition();
+      }
+
+      &:hover {
+
+        svg {
+          fill: @red;
+        }
+      }
+    }
+
+    input {
+      width        : 100%;
+      height       : 42px;
+      border       : 1px solid transparent;
+      border-radius: 0;
+      background   : #F9F9F9;
+      padding      : 0 50px 0 10px;
+      font-size    : 18px;
+      color        : @black;
+      transition   : border-color .4s;
+
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        color  : #919191;
+      }
+
+      &::-moz-placeholder {
+        opacity: 1;
+        color  : #919191;
+      }
+
+      &:-moz-placeholder {
+        opacity: 1;
+        color  : #919191;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 1;
+        color  : #919191;
+      }
+
+      &:hover {
+        border-color: @black;
+      }
+
+      &:focus {
+        border-color: #DDDDDD;
+      }
+    }
+  }
+
+  &__dropdown {
+    display   : none;
+    position  : absolute;
+    left      : 0;
+    right     : 0;
+    top       : calc(100% + 5px);
+    border    : 1px solid #DDDDDD;
+    background: #fff;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    padding      : 10px;
+    font-weight  : 400;
+    font-size    : 18px;
+    line-height  : 23px;
+    color        : @black;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin            : 0;
+      -webkit-line-clamp: 1;
+      display           : -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow          : hidden;
+    }
+
+    i {
+      color     : @red;
+      font-style: normal;
+    }
+
+    span {
+      margin-right: 10px;
+      color       : #919191;
+    }
+  }
+}

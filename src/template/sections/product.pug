@@ -1,0 +1,44 @@
+// product
+
+.product
+
+  include product-gallery
+
+  .product__right
+
+    .product__header
+
+      a.product__fav(href="#")
+        svg: use(href="img/icons/sprite.svg#heart")
+
+      p.product__collection Коллекция
+        span «Классика»
+
+      p.product__name Тумбочка в классическом стиле «Algerd»
+
+      p.product__price.red 35 600р
+        span 35 600р
+
+      .product__btw
+
+        .product__time
+          svg: use(href="img/icons/sprite.svg#gear")
+          span Срок изготовления: <strong>от 14 до 20 дней</strong>
+
+        .product__delivery
+          svg: use(href="img/icons/sprite.svg#truck")
+          span Доставляем в собранном виде
+
+    include prod-color
+
+    include prod-info
+
+    include prod-btns
+
+    include prod-desc
+
+    include prod-links
+
+    include share
+
+// end product
