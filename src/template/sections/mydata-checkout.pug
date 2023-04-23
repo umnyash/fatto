@@ -7,12 +7,12 @@
     .form-group
       label Имя
         sup *
-      input(type="text" name="#" placeholder="Иван" required)
+      input(type="text" name="#" placeholder="Иван" pattern="^[A-Za-zА-Яа-яЁё]+$" required)
 
     .form-group
       label Фамилия
         sup *
-      input(type="text" name="#" placeholder="Иванов" required)
+      input(type="text" name="#" placeholder="Иванов" pattern="^[A-Za-zА-Яа-яЁё]+$" required)
 
     .form-group
       label Телефон

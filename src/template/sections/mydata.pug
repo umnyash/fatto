@@ -15,12 +15,12 @@
       .form-group
         label Имя
           sup *
-        input(type="text" name="#" value="Анна" required)
+        input(type="text" name="#" value="Анна" pattern="^[A-Za-zА-Яа-яЁё]+$" required)
 
       .form-group
         label Фамилия
           sup *
-        input(type="text" name="#" value="Петрова" required)
+        input(type="text" name="#" value="Петрова" pattern="^[A-Za-zА-Яа-яЁё]+$" required)
 
       .form-group
         label Телефон
