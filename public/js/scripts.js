@@ -2,6 +2,30 @@ $(function () {
   let screenWidth = screen.width;
 
   /*
+   *  Util functions
+   */
+
+  function checkBreakWidth(breakWidth) {
+    return window.matchMedia(`(max-width: ${breakWidth}px)`).matches;
+  }
+
+  function setSwiper(sliderElement, listElement, itemElements, options) {
+    sliderElement.classList.add('swiper');
+    listElement.classList.add('swiper-wrapper');
+    itemElements.forEach((item) => item.classList.add('swiper-slide'));
+
+    return new Swiper(sliderElement, options);
+  }
+
+  function deleteSwiper(swiper, sliderElement, listElement, itemElements) {
+    swiper.destroy(true, true);
+
+    sliderElement.classList.remove('swiper');
+    listElement.classList.remove('swiper-wrapper');
+    itemElements.forEach((item) => item.classList.remove('swiper-slide'));
+  }
+
+  /*
    *  Search dropdown
    */
 
