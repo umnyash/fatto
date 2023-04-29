@@ -599,7 +599,7 @@ $(function () {
 
   let activeSlide = "1";
 
-  const collectionsSwiper = new Swiper(".collections-swiper .swiper", {
+  const collectionsSwiper = new Swiper(".collections-swiper > .swiper", {
     //effect: "fade",
     loop: true,
     slidesPerView: 1,
