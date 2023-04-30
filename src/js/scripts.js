@@ -629,6 +629,7 @@ $(function () {
 
   const mobileSliders = [];
   const collectionGallerySliderElements = document.querySelectorAll('.collections .coll-slide__right');
+  const cattabSliderElements = document.querySelectorAll('.cattabs__tab');
 
   collectionGallerySliderElements.forEach((sliderElement) => {
     mobileSliders.push({
@@ -636,8 +637,17 @@ $(function () {
       sliderElement,
       listElement: sliderElement.querySelector('.coll-slide__gallery'),
       slideElements: sliderElement.querySelectorAll('.card'),
-    })
-  })
+    });
+  });
+
+  cattabSliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.cattabs__grid'),
+      slideElements: sliderElement.querySelectorAll('.card, .cattabs__all'),
+    });
+  });
 
   if (mobileSliders.length) {
     const toggleMobileSwipersState = () => {
