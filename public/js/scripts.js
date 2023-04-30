@@ -624,6 +624,61 @@ $(function () {
   $(".slide-count__total").text(slidesCount);
 
   /*
+   *  Swipers only on mobile width
+   */
+
+  const mobileSliders = [];
+  const collectionGallerySliderElements = document.querySelectorAll('.collections .coll-slide__right');
+
+  collectionGallerySliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.coll-slide__gallery'),
+      slideElements: sliderElement.querySelectorAll('.card'),
+    })
+  })
+
+  if (mobileSliders.length) {
+    const toggleMobileSwipersState = () => {
+      if (checkBreakWidth(767)) {
+        mobileSliders.forEach((slider) => {
+          if(slider.swiper?.initialized) {
+            return;
+          }
+
+          slider.swiper = setSwiper(
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements,
+            {
+              spaceBetween: 5,
+              slidesPerView: 'auto',
+              speed: 800,
+            }
+          );
+        });
+      } else {
+        mobileSliders.forEach((slider) => {
+          if (!slider.swiper || slider.swiper?.destroyed) {
+            return;
+          }
+
+          deleteSwiper(
+            slider.swiper,
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements
+          );
+        });
+      }
+    };
+
+    toggleMobileSwipersState();
+    window.addEventListener('resize', toggleMobileSwipersState);
+  }
+
+  /*
    *  Filter swiper
    */
 
