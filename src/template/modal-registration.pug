@@ -1,0 +1,49 @@
+doctype html
+html(lang='ru')
+
+  include sections/head
+
+  body
+
+    .wrap
+
+      include sections/top-page
+
+      main
+
+        .container
+
+          include sections/err404
+
+          include sections/feedback
+
+      include sections/footer
+
+    include sections/bottom-page
+
+    script.
+      const formRegistrationElement =  document.querySelector('#form-registration');
+      const requestCodeButtonElement = document.querySelector('#js-request-code');
+      const requestCodeButtonTextElements = requestCodeButtonElement.querySelectorAll('span');
+      const sendCodeButtonElement = document.querySelector('#js-send-code');
+      const formRegistrationResendingElement = formRegistrationElement.querySelector('.form-registration__resending');
+      const formRegistrationResendingCounterElement = formRegistrationResendingElement.querySelector('.form-registration__resending-counter');
+      requestCodeButtonElement.addEventListener('click', () => {
+        formRegistrationElement.classList.add('form-registration--code-entry');
+        requestCodeButtonTextElements.forEach((element) => element.textContent = 'Отправить повторно');
+        requestCodeButtonElement.classList.add('modal__btn--hidden');
+        sendCodeButtonElement.classList.remove('modal__btn--hidden');
+        formRegistrationResendingElement.classList.remove('form-registration__resending--hidden');
+        const formRegistrationResendingTimerId = setInterval(() => {
+          counterValue = +formRegistrationResendingCounterElement.textContent;
+          counterValue--;
+          formRegistrationResendingCounterElement.textContent = counterValue;
+        }, 1000);
+        setTimeout(() => {
+          clearInterval(formRegistrationResendingTimerId);
+          formRegistrationResendingElement.classList.add('form-registration__resending--hidden');
+          requestCodeButtonElement.classList.remove('modal__btn--hidden');
+        }, +formRegistrationResendingCounterElement.textContent * 1000)
+      });
+
+

@@ -12,30 +12,42 @@
       h2.modal__title Регистрация
       p.modal__text Следите за состоянием заказа и сохраняйте избранные товары
 
-      form#form-registration(action="")
+      form.form-registration#form-registration(action="")
 
-        .form-group
+        .form-registration__email.form-group
           label Почта
           input(type="email" name="#")
 
-        .form-checkbox
+        .form-registration__subscribe.form-checkbox
           input#subscribe(type="checkbox" name="#" checked)
           label(for="subscribe") Подписаться на рассылку
 
-        .form-checkbox
+        .form-registration__designer.form-checkbox
           input#designer(type="checkbox" name="#")
           label(for="designer") Я дизайнер
 
+        .form-registration__code.form-group
+          label Введите код
+          input(type="text" name="code" placeholder="– – – –" autocomplete="off")
+
+        p.form-registration__status.form-registration__status--success На электронную почту был отправлен код авторизации
+        p.form-registration__resending.form-registration__resending--hidden повторить отправку через #[span.form-registration__resending-counter 3]
+
         .modal__info После регистрации заполните форму для дизайнеров в вашем личном кабинете
 
-      button.modal__btn#js-send-code(type="button")
-        span Выслать код
-        span Выслать код
+      .modal__buttons
+
+        button.modal__btn#js-request-code(type="button")
+          span Выслать код
+          span Выслать код
+
+        button.modal__btn.modal__btn--hidden#js-send-code(type="button")
+          span Войти
+          span Войти
 
       .modal__footer
         p У вас уже есть личный кабинет?
         a.js-login(href="#js-modal-login") Войти
-
 
 .modal.js-modal#js-modal-login
 
@@ -54,7 +66,7 @@
           label Почта
           input(type="email" name="#" autocomplete="off")
 
-      button.modal__btn#js-send-code(type="button")
+      button.modal__btn#js-request-code(type="button")
         span Выслать код
         span Выслать код
 

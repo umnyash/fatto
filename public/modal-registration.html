@@ -354,77 +354,36 @@
       <!-- end header-->
       <main>
         <div class="container">
-          <!-- breadcrumbs-->
-          <nav class="breadcrumbs">
-            <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></div>
-            <div class="breadcrumbs__item"><span>Контакты</span></div>
-          </nav>
-          <!-- end breadcrumbs-->
-        </div>
-        <div class="page-head">
-          <div class="page-head__bg">
-            <picture>
-              <source srcset="img/webp/bg-contacts-sm.webp" media="(max-width:575px)" type="image/webp">
-              <source srcset="img/bg-contacts-sm.jpg" media="(max-width:575px)">
-              <source srcset="img/webp/bg-contacts-md.webp" media="(max-width:1080px)" type="image/webp">
-              <source srcset="img/bg-contacts-md.jpg" media="(max-width:1080px)">
-              <source srcset="img/webp/bg-contacts.webp" type="image/webp"><img src="img/bg-contacts.jpg" alt="">
-            </picture>
-          </div>
-          <div class="container">
-            <p class="page-title">Контакты</p>
-          </div>
-        </div>
-        <div class="container">
-          <!-- contacts-->
-          <div class="contacts">
-            <div class="contacts__left">
-              <div class="contacts__item">
-                <p class="contacts__title">Телефон</p><a class="contacts__link" href="tel:+79645159041">+7 (964) 515-90-41</a>
-                <p class="contacts__info">Call-центр Пн-Пт 9.00-18.00</p>
-              </div>
-              <div class="contacts__item">
-                <p class="contacts__title">Почта</p><a class="contacts__link" href="mailto:FATTO_help_mail@.com">FATTO_help_mail@.com</a>
-              </div>
-              <div class="contacts__item">
-                <p class="contacts__title">Мы в соц сетях</p>
-                <!-- social-->
-                <div class="social">
-                  <div class="social__nav"><a class="social__link" href="#"><img src="img/icons/vk.svg" alt=""></a><a class="social__link" href="#"><img src="img/icons/tg.svg" alt=""></a><a class="social__link" href="#"><img src="img/icons/pinterest.svg" alt=""></a><a class="social__link" href="#"><img src="img/icons/youtube.svg" alt=""></a></div>
-                </div>
-                <!-- end social-->
-              </div>
+          <!-- err404-->
+          <div class="err404">
+            <div class="err404__img">
+              <picture>
+                <source srcset="img/webp/img404.webp" type="image/webp"><img src="img/img404.png" alt="">
+              </picture>
             </div>
-            <div class="contacts__right">
-              <!-- feedback-form-->
-              <div class="feedback-form">
-                <p class="feedback-form__title">Обратная связь</p>
-                <form action="">
-                  <div class="form-group">
-                    <label>ФИО<sup>*</sup></label>
-                    <input type="text" name="#" placeholder="Петрова Марина Александровна" required>
-                  </div>
-                  <div class="form-group">
-                    <label>Телефон<sup>*</sup></label>
-                    <input class="phone" type="text" name="#" placeholder="+7 111 111 11 11" required>
-                  </div>
-                  <div class="form-group">
-                    <label>Комментарий</label>
-                    <textarea name="#"></textarea>
-                  </div>
-                  <button class="form-btn" type="submit"><span>Отправить заявку</span><span>Отправить заявку</span></button>
-                  <p class="form-agree">Нажимая на кнопку «Отправить заявку», я принимаю условия <a href="#">публичной оферты</a> и <a href="#">политики конфиденциальности</a></p>
-                </form>
+            <p class="err404__text">Страница не найдена</p><a class="err404__btn" href="#"><span>На главную</span><span>На главную</span></a>
+          </div>
+          <!-- end err404-->
+          <!-- feedback-->
+          <div class="feedback">
+            <div class="feedback__bg">
+              <picture>
+                <source srcset="img/webp/bg-help-sm.webp" media="(max-width:575px)" type="image/webp">
+                <source srcset="img/bg-help-sm.jpg" media="(max-width:575px)">
+                <source srcset="img/webp/bg-help.webp" type="image/webp"><img src="img/bg-help.jpg" alt="">
+              </picture>
+            </div>
+            <p class="feedback__text">Нужна помощь?</p>
+            <p class="feedback__title">Позвоните или напишите</p>
+            <div class="feedback__contacts"><a class="feedback__tel" href="tel:+79645159041">+7 (964) 515-90-41</a>
+              <!-- social-->
+              <div class="social">
+                <div class="social__nav"><a class="social__link" href="#"><img src="img/icons/tg.svg" alt=""></a><a class="social__link" href="#"><img src="img/icons/wa.svg" alt=""></a><a class="social__link" href="#"><img src="img/icons/viber.svg" alt=""></a></div>
               </div>
-              <!-- end feedback-form-->
+              <!-- end social-->
             </div>
           </div>
-          <!-- end contacts-->
-          <!-- map-->
-          <div class="map">
-            <p class="map__text">Доставляем во все<span>регионы России</span></p>
-          </div>
-          <!-- end map-->
+          <!-- end feedback-->
         </div>
       </main>
       <!-- footer-->
@@ -533,39 +492,6 @@
       </footer>
       <!-- end footer-->
     </div>
-    <!-- modal-->
-    <div class="modal js-modal" id="js-success-contacts">
-      <div class="modal__inner modal__inner--res"><a class="modal__close js-modal-close" href="#">
-          <svg>
-            <use href="img/icons/sprite.svg#close"></use>
-          </svg></a>
-        <div class="modal__icon green">
-          <svg>
-            <use href="img/icons/sprite.svg#check"></use>
-          </svg>
-        </div>
-        <div class="modal__text-res">
-          <p>Ваша заявка успешно принята и находится в обработке</p>
-          <p>В течение нескольких часов с вами свяжется менеджер, чтобы ответить на все ваши вопросы</p>
-        </div>
-      </div>
-    </div>
-    <div class="modal js-modal" id="js-fail">
-      <div class="modal__inner modal__inner--res"><a class="modal__close js-modal-close" href="#">
-          <svg>
-            <use href="img/icons/sprite.svg#close"></use>
-          </svg></a>
-        <div class="modal__icon red">
-          <svg>
-            <use href="img/icons/sprite.svg#close"></use>
-          </svg>
-        </div>
-        <div class="modal__text-res">
-          <p>К сожалению что-то пошло не так<br> отправьте заявку снова</p>
-        </div>
-      </div>
-    </div>
-    <!-- end modal-->
     <!-- scrollup-->
     <div class="scrollup">
       <div class="scrollup__wrap"><span>Наверх</span>
@@ -684,5 +610,30 @@
     <script src="js/libs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      const formRegistrationElement =  document.querySelector('#form-registration');
+      const requestCodeButtonElement = document.querySelector('#js-request-code');
+      const requestCodeButtonTextElements = requestCodeButtonElement.querySelectorAll('span');
+      const sendCodeButtonElement = document.querySelector('#js-send-code');
+      const formRegistrationResendingElement = formRegistrationElement.querySelector('.form-registration__resending');
+      const formRegistrationResendingCounterElement = formRegistrationResendingElement.querySelector('.form-registration__resending-counter');
+      requestCodeButtonElement.addEventListener('click', () => {
+        formRegistrationElement.classList.add('form-registration--code-entry');
+        requestCodeButtonTextElements.forEach((element) => element.textContent = 'Отправить повторно');
+        requestCodeButtonElement.classList.add('modal__btn--hidden');
+        sendCodeButtonElement.classList.remove('modal__btn--hidden');
+        formRegistrationResendingElement.classList.remove('form-registration__resending--hidden');
+        const formRegistrationResendingTimerId = setInterval(() => {
+          counterValue = +formRegistrationResendingCounterElement.textContent;
+          counterValue--;
+          formRegistrationResendingCounterElement.textContent = counterValue;
+        }, 1000);
+        setTimeout(() => {
+          clearInterval(formRegistrationResendingTimerId);
+          formRegistrationResendingElement.classList.add('form-registration__resending--hidden');
+          requestCodeButtonElement.classList.remove('modal__btn--hidden');
+        }, +formRegistrationResendingCounterElement.textContent * 1000)
+      });
+    </script>
   </body>
 </html>

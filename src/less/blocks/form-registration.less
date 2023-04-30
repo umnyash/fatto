@@ -1,0 +1,37 @@
+.form-registration__code {
+  display: none;
+}
+
+.form-registration__resending {
+  margin: 20px 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.form-registration__status {
+  display: none;
+  margin: 20px 0;
+
+  &--success {
+    color: @green;
+  }
+
+  &--error {
+    color: @red;
+  }
+}
+
+.form-registration--code-entry {
+  .form-registration__email,
+  .form-registration__subscribe,
+  .form-registration__designer {
+    display: none;
+  }
+
+  .form-registration__code,
+  .form-registration__status {
+    display: block;
+  }
+}
