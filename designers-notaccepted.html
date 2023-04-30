@@ -650,22 +650,31 @@
         <div class="modal__one">
           <h2 class="modal__title">Регистрация</h2>
           <p class="modal__text">Следите за состоянием заказа и сохраняйте избранные товары</p>
-          <form id="form-registration" action="">
-            <div class="form-group">
+          <form class="form-registration" id="form-registration" action="">
+            <div class="form-registration__email form-group">
               <label>Почта</label>
               <input type="email" name="#">
             </div>
-            <div class="form-checkbox">
+            <div class="form-registration__subscribe form-checkbox">
               <input id="subscribe" type="checkbox" name="#" checked>
               <label for="subscribe">Подписаться на рассылку</label>
             </div>
-            <div class="form-checkbox">
+            <div class="form-registration__designer form-checkbox">
               <input id="designer" type="checkbox" name="#">
               <label for="designer">Я дизайнер</label>
             </div>
+            <div class="form-registration__code form-group">
+              <label>Введите код</label>
+              <input type="text" name="code" placeholder="– – – –" autocomplete="off">
+            </div>
+            <p class="form-registration__status form-registration__status--success">На электронную почту был отправлен код авторизации</p>
+            <p class="form-registration__resending form-registration__resending--hidden">повторить отправку через <span class="form-registration__resending-counter">3</span></p>
             <div class="modal__info">После регистрации заполните форму для дизайнеров в вашем личном кабинете</div>
           </form>
-          <button class="modal__btn" id="js-send-code" type="button"><span>Выслать код</span><span>Выслать код</span></button>
+          <div class="modal__buttons">
+            <button class="modal__btn" id="js-request-code" type="button"><span>Выслать код</span><span>Выслать код</span></button>
+            <button class="modal__btn modal__btn--hidden" id="js-send-code" type="button"><span>Войти</span><span>Войти</span></button>
+          </div>
           <div class="modal__footer">
             <p>У вас уже есть личный кабинет?</p><a class="js-login" href="#js-modal-login">Войти</a>
           </div>
@@ -685,7 +694,7 @@
               <input type="email" name="#" autocomplete="off">
             </div>
           </form>
-          <button class="modal__btn" id="js-send-code" type="button"><span>Выслать код</span><span>Выслать код</span></button>
+          <button class="modal__btn" id="js-request-code" type="button"><span>Выслать код</span><span>Выслать код</span></button>
           <div class="modal__footer">
             <p>У вас нет личного кабинета?</p><a class="js-registr" href="#js-modal-registr">Зарегистрироваться</a>
           </div>
