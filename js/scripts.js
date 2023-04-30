@@ -2,6 +2,30 @@ $(function () {
   let screenWidth = screen.width;
 
   /*
+   *  Util functions
+   */
+
+  function checkBreakWidth(breakWidth) {
+    return window.matchMedia(`(max-width: ${breakWidth}px)`).matches;
+  }
+
+  function setSwiper(sliderElement, listElement, itemElements, options) {
+    sliderElement.classList.add('swiper');
+    listElement.classList.add('swiper-wrapper');
+    itemElements.forEach((item) => item.classList.add('swiper-slide'));
+
+    return new Swiper(sliderElement, options);
+  }
+
+  function deleteSwiper(swiper, sliderElement, listElement, itemElements) {
+    swiper.destroy(true, true);
+
+    sliderElement.classList.remove('swiper');
+    listElement.classList.remove('swiper-wrapper');
+    itemElements.forEach((item) => item.classList.remove('swiper-slide'));
+  }
+
+  /*
    *  Search dropdown
    */
 
@@ -575,7 +599,7 @@ $(function () {
 
   let activeSlide = "1";
 
-  const collectionsSwiper = new Swiper(".collections-swiper .swiper", {
+  const collectionsSwiper = new Swiper(".collections-swiper > .swiper", {
     //effect: "fade",
     loop: true,
     slidesPerView: 1,
@@ -598,6 +622,71 @@ $(function () {
     $(".collections-swiper .swiper-slide-duplicate").length;
 
   $(".slide-count__total").text(slidesCount);
+
+  /*
+   *  Swipers only on mobile width
+   */
+
+  const mobileSliders = [];
+  const collectionGallerySliderElements = document.querySelectorAll('.collections .coll-slide__right');
+  const cattabSliderElements = document.querySelectorAll('.cattabs__tab');
+
+  collectionGallerySliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.coll-slide__gallery'),
+      slideElements: sliderElement.querySelectorAll('.card'),
+    });
+  });
+
+  cattabSliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.cattabs__grid'),
+      slideElements: sliderElement.querySelectorAll('.card, .cattabs__all'),
+    });
+  });
+
+  if (mobileSliders.length) {
+    const toggleMobileSwipersState = () => {
+      if (checkBreakWidth(767)) {
+        mobileSliders.forEach((slider) => {
+          if(slider.swiper?.initialized) {
+            return;
+          }
+
+          slider.swiper = setSwiper(
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements,
+            {
+              spaceBetween: 5,
+              slidesPerView: 'auto',
+              speed: 800,
+            }
+          );
+        });
+      } else {
+        mobileSliders.forEach((slider) => {
+          if (!slider.swiper || slider.swiper?.destroyed) {
+            return;
+          }
+
+          deleteSwiper(
+            slider.swiper,
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements
+          );
+        });
+      }
+    };
+
+    toggleMobileSwipersState();
+    window.addEventListener('resize', toggleMobileSwipersState);
+  }
 
   /*
    *  Filter swiper
