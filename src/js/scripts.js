@@ -874,6 +874,4 @@ $(function () {
   $(".range-price__max span").text(
     $("#range-price").slider("values", 1).toLocaleString()
   );
-
-  $(".ui-slider-handle").draggable();
 });
