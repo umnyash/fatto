@@ -31,14 +31,15 @@ body {
 }
 
 .container {
+  width: 100%;
   .wrapper();
-  .xxl(width, @container-xxl);
-  .xl(width, @container-xl);
-  .lg(width, @container-lg);
-  .md(width, @container-md);
-  .sm(width, @container-sm);
-  .xs(width, @container-xs);
-  .xxs(width, @container-xxs);
+  .xxl(max-width, @container-xxl);
+  .xl(max-width, @container-xl);
+  .lg(max-width, @container-lg);
+  .md(max-width, @container-md);
+  .sm(max-width, @container-sm);
+  .xs(max-width, @container-xs);
+  .xxs(max-width, @container-xxs);
 }
 
 img {
