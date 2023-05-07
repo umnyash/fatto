@@ -624,68 +624,68 @@ $(function () {
   $(".slide-count__total").text(slidesCount);
 
   /*
-   *  Fickle swipers
+   *  Swipers only on mobile width
    */
 
-  const slidersGroup1 = [];
+  const mobileSliders = [];
   const collectionGallerySliderElements = document.querySelectorAll('.collections .coll-slide__right');
   const cattabSliderElements = document.querySelectorAll('.cattabs__tab');
 
-  const addSlidersData = (list, sliderElements, listElementClass, slideElementClass) => {
-    sliderElements.forEach((sliderElement) => {
-      list.push({
-        sliderElement,
-        listElement: sliderElement.querySelector(listElementClass),
-        slideElements: sliderElement.querySelectorAll(slideElementClass),
-      });
+  collectionGallerySliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.coll-slide__gallery'),
+      slideElements: sliderElement.querySelectorAll('.card'),
     });
-  };
+  });
 
-  addSlidersData(slidersGroup1, collectionGallerySliderElements, '.coll-slide__gallery', '.card');
-  addSlidersData(slidersGroup1, cattabSliderElements, '.cattabs__grid', '.card, .cattabs__all');
-
-  const swiperOptions1 = {
-    spaceBetween: 5,
-    slidesPerView: 'auto',
-    speed: 800,
-  };
-
-  const toggleSwipersState = (sliders, breakpoint, swiperOptions) => {
-    if (checkBreakWidth(breakpoint)) {
-      sliders.forEach((slider) => {
-        if(slider.swiper?.initialized) {
-          return;
-        }
-
-        slider.swiper = setSwiper(
-          slider.sliderElement,
-          slider.listElement,
-          slider.slideElements,
-          swiperOptions
-        );
-      });
-    } else {
-      sliders.forEach((slider) => {
-        if (!slider.swiper || slider.swiper?.destroyed) {
-          return;
-        }
-
-        deleteSwiper(
-          slider.swiper,
-          slider.sliderElement,
-          slider.listElement,
-          slider.slideElements
-        );
-      });
-    }
-  };
-
-  if (1) {
-    toggleSwipersState(slidersGroup1, 767, swiperOptions1);
-
-    window.addEventListener('resize', () => {
-      toggleSwipersState(slidersGroup1, 767, swiperOptions1);
+  cattabSliderElements.forEach((sliderElement) => {
+    mobileSliders.push({
+      swiper: null,
+      sliderElement,
+      listElement: sliderElement.querySelector('.cattabs__grid'),
+      slideElements: sliderElement.querySelectorAll('.card, .cattabs__all'),
     });
+  });
+
+  if (mobileSliders.length) {
+    const toggleMobileSwipersState = () => {
+      if (checkBreakWidth(767)) {
+        mobileSliders.forEach((slider) => {
+          if(slider.swiper?.initialized) {
+            return;
+          }
+
+          slider.swiper = setSwiper(
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements,
+            {
+              spaceBetween: 5,
+              slidesPerView: 'auto',
+              speed: 800,
+            }
+          );
+        });
+      } else {
+        mobileSliders.forEach((slider) => {
+          if (!slider.swiper || slider.swiper?.destroyed) {
+            return;
+          }
+
+          deleteSwiper(
+            slider.swiper,
+            slider.sliderElement,
+            slider.listElement,
+            slider.slideElements
+          );
+        });
+      }
+    };
+
+    toggleMobileSwipersState();
+    window.addEventListener('resize', toggleMobileSwipersState);
   }
 
   /*
